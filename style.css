@@ -1646,8 +1646,7 @@ h4,
   flex-direction: row;
   align-items: center;
   gap: 1rem;
-  transition: background 0.5s ease, box-shadow 0.5s ease, border-color 0.5s ease;
-  /* changed from 'all' */
+  transition: background 0.5s ease, box-shadow 0.5s ease, border-color 0.5s ease, transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
   position: relative;
   overflow: hidden;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
@@ -2126,7 +2125,7 @@ h4,
   border: 1px solid rgba(255, 255, 255, 0.05);
   border-radius: 12px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-  transition: background 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease;
+  transition: background 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease, transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
   position: relative;
   overflow: hidden;
 }
@@ -2174,7 +2173,7 @@ h4,
   border-radius: 16px;
   padding: 4rem 3rem;
   text-align: center;
-  transition: background 0.5s ease, border-color 0.5s ease, box-shadow 0.5s ease;
+  transition: background 0.5s ease, border-color 0.5s ease, box-shadow 0.5s ease, transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
   box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4);
   position: relative;
   overflow: hidden;
@@ -2387,12 +2386,14 @@ h4,
   }
 
   .emp-hero {
-    align-items: flex-end;
-    padding-bottom: 0;
+    align-items: center;
+    padding-top: 90px;
+    padding-bottom: 60px;
+    min-height: 100svh;
   }
 
   .emp-hero-content {
-    padding: 0 5% 5rem;
+    padding: 0 5%;
     max-width: 100%;
   }
 
