@@ -337,10 +337,7 @@ h4,
 .hero {
   position: relative;
   height: 100vh;
-  /* svh fallback for modern mobile browsers */
-  height: 100svh;
-  min-height: 500px;
-  max-height: 900px;
+  min-height: 600px;
   display: flex;
   align-items: center;
   padding: 0 5%;
@@ -1202,12 +1199,6 @@ h4,
   }
 
   /* ---- HERO MOBILE FIXES ---- */
-
-  /* Completely hide cinematic bars on mobile – they add phantom height */
-  .hero-bar-top,
-  .hero-bar-bottom {
-    display: none !important;
-  }
 
   /* Disable GSAP parallax transforms on mobile */
   .hero-bg {
