@@ -1287,12 +1287,15 @@ h4,
 /* --- HERO --- */
 .emp-hero {
   position: relative;
-  min-height: 100vh;  /* Use min-height so it spans the screen but can grow if needed */
+  min-height: 100vh;
+  /* Use min-height so it spans the screen but can grow if needed */
   display: flex;
-  align-items: center;  /* Center the content vertically between the header and the bottom */
+  align-items: center;
+  /* Center the content vertically between the header and the bottom */
   justify-content: flex-start;
   padding-top: 120px;
-  padding-bottom: 60px; /* Buffer at the bottom */
+  padding-bottom: 100px;
+  /* Buffer at the bottom for highlights overlap */
   overflow: hidden;
 }
 
@@ -1336,7 +1339,8 @@ h4,
 .emp-hero-content {
   position: relative;
   z-index: 3;
-  padding: 0 6% 0;  /* Bottom padding removed because of center alignment */
+  padding: 0 6% 0;
+  /* Bottom padding removed because of center alignment */
   max-width: 850px;
   width: 100%;
 }
@@ -1478,20 +1482,18 @@ h4,
 
 /* --- HIGHLIGHTS BAR --- */
 .emp-highlights-bar {
-  background: rgba(11, 17, 20, 0.4);
+  background: rgba(11, 17, 20, 0.6);
   backdrop-filter: blur(30px);
   -webkit-backdrop-filter: blur(30px);
-  border-top: 1px solid rgba(255, 255, 255, 0.05);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(201, 164, 97, 0.05) inset;
   padding: 0;
   overflow: hidden;
   position: relative;
   z-index: 10;
-  transform: translateY(-20%);
-  max-width: 1400px;
-  margin: 0 auto;
-  border-radius: 12px;
+  max-width: 1200px;
+  margin: -3rem auto 0;
+  border-radius: 16px;
 }
 
 .emp-highlights-inner {
@@ -1504,9 +1506,9 @@ h4,
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 0.6rem;
-  padding: 3rem 2rem;
-  border-right: 1px solid rgba(255, 255, 255, 0.04);
+  gap: 0.4rem;
+  padding: 1.8rem 1.5rem;
+  border-right: 1px solid rgba(255, 255, 255, 0.06);
   flex: 1;
   text-align: center;
   transition: background-color 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease;
@@ -1540,7 +1542,7 @@ h4,
 
 .highlight-stat-value {
   font-family: var(--font-serif);
-  font-size: 3rem;
+  font-size: 2.2rem;
   color: var(--gold-color);
   line-height: 1;
   text-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
@@ -1548,16 +1550,16 @@ h4,
 
 .highlight-stat-label {
   font-family: var(--font-sans);
-  font-size: 0.8rem;
-  letter-spacing: 3px;
+  font-size: 0.72rem;
+  letter-spacing: 2.5px;
   text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.6);
+  color: rgba(255, 255, 255, 0.55);
   font-weight: 500;
 }
 
 /* --- DETAILS SECTION --- */
 .emp-details {
-  padding: 2rem 5% var(--spacing-xl);
+  padding: 5rem 5% var(--spacing-xl);
   background: var(--primary-color);
   position: relative;
 }
@@ -1634,17 +1636,18 @@ h4,
   background: linear-gradient(145deg, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0.01) 100%);
   backdrop-filter: blur(15px);
   -webkit-backdrop-filter: blur(15px);
-  border: 1px solid rgba(255, 255, 255, 0.05);
-  padding: 2rem 1.8rem;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  padding: 1.5rem 1.5rem;
   border-radius: 12px;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  align-items: center;
   gap: 1rem;
   transition: background 0.5s ease, box-shadow 0.5s ease, border-color 0.5s ease;
   /* changed from 'all' */
   position: relative;
   overflow: hidden;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
 }
 
 .feature-item::before {
@@ -1673,10 +1676,13 @@ h4,
 }
 
 .feature-icon {
-  font-size: 2.5rem;
-  line-height: 1;
-  filter: drop-shadow(0 5px 15px rgba(201, 164, 97, 0.4));
-  margin-bottom: 0.2rem;
+  width: 1.6rem;
+  height: 1.6rem;
+  min-width: 1.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  filter: drop-shadow(0 3px 10px rgba(201, 164, 97, 0.35));
   color: var(--gold-color);
   transition: transform 0.4s ease;
 }
@@ -1687,15 +1693,15 @@ h4,
 
 .feature-text {
   font-family: var(--font-sans);
-  font-size: 1.05rem;
-  font-weight: 500;
-  color: rgba(255, 255, 255, 0.9);
+  font-size: 0.95rem;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.85);
   line-height: 1.4;
 }
 
-/* --- GALLERY --- */
+/* --- GALLERY & CAROUSEL --- */
 .emp-gallery {
-  padding: 8rem 0 6rem;
+  padding: 8rem 0 0;
   background: linear-gradient(to bottom, var(--primary-color) 0%, var(--secondary-color) 100%);
   overflow: hidden;
 }
@@ -1705,28 +1711,238 @@ h4,
   margin-bottom: 4rem;
 }
 
-.gallery-track-container {
+/* ── Carousel Shell ── */
+.emp-carousel {
+  position: relative;
   width: 100%;
+}
+
+/* ── Stage (main slide area) ── */
+.emp-carousel-stage {
+  position: relative;
+  width: 100%;
+  height: 70vh;
+  min-height: 420px;
+  max-height: 780px;
+  overflow: hidden;
+  background: #050a0d;
+}
+
+.emp-carousel-track {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  will-change: transform;
+  transition: transform 0.85s cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+.emp-carousel-slide {
+  position: relative;
+  flex: 0 0 100%;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  cursor: zoom-in;
+}
+
+.emp-carousel-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 8s linear;
+  transform: scale(1.07);
+}
+
+.emp-carousel-slide.is-active img {
+  transform: scale(1);
+}
+
+/* Gradient overlay on slide */
+.emp-carousel-slide::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(to top, rgba(5, 10, 13, 0.7) 0%, transparent 40%),
+    linear-gradient(to right, rgba(5, 10, 13, 0.3) 0%, transparent 60%);
+  pointer-events: none;
+}
+
+/* ── Slide Counter ── */
+.emp-carousel-counter {
+  position: absolute;
+  bottom: 5.5rem;
+  left: 2.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  z-index: 10;
+  font-family: var(--font-sans);
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.85rem;
+  letter-spacing: 2px;
+}
+
+#empSlideNum {
+  font-family: var(--font-serif);
+  font-size: 2.5rem;
+  color: var(--gold-color);
+  line-height: 1;
+}
+
+.emp-carousel-sep {
+  width: 40px;
+  height: 1px;
+  background: linear-gradient(to right, var(--gold-color), transparent);
+}
+
+/* ── Navigation Arrows ── */
+.emp-carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: rgba(11, 17, 20, 0.55);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(201, 164, 97, 0.3);
+  color: var(--gold-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.3s, border-color 0.3s, box-shadow 0.3s, transform 0.3s;
+}
+
+.emp-carousel-btn:hover {
+  background: rgba(201, 164, 97, 0.15);
+  border-color: rgba(201, 164, 97, 0.7);
+  box-shadow: 0 0 25px rgba(201, 164, 97, 0.3);
+  transform: translateY(-50%) scale(1.08);
+}
+
+.emp-carousel-prev {
+  left: 1.5rem;
+}
+
+.emp-carousel-next {
+  right: 1.5rem;
+}
+
+/* ── Dot Indicators ── */
+.emp-carousel-dots {
+  position: absolute;
+  bottom: 1.8rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 0.6rem;
+  z-index: 10;
+}
+
+.emp-carousel-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.3);
+  border: none;
+  cursor: pointer;
+  transition: background 0.4s, width 0.4s cubic-bezier(0.16, 1, 0.3, 1), border-radius 0.4s;
+  padding: 0;
+}
+
+.emp-carousel-dot.is-active {
+  width: 28px;
+  border-radius: 4px;
+  background: var(--gold-color);
+  box-shadow: 0 0 12px rgba(201, 164, 97, 0.6);
+}
+
+/* ── Expand Button ── */
+.emp-carousel-expand {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  z-index: 10;
+  width: 42px;
+  height: 42px;
+  border-radius: 10px;
+  background: rgba(11, 17, 20, 0.55);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: rgba(255, 255, 255, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.3s, color 0.3s, border-color 0.3s;
+  opacity: 0;
+}
+
+.emp-carousel-stage:hover .emp-carousel-expand {
+  opacity: 1;
+}
+
+.emp-carousel-expand:hover {
+  background: rgba(201, 164, 97, 0.15);
+  border-color: rgba(201, 164, 97, 0.5);
+  color: var(--gold-color);
+}
+
+/* ── Thumbnail Strip ── */
+.emp-carousel-thumbs {
+  display: flex;
+  gap: 0.75rem;
+  padding: 1.25rem 3%;
+  background: rgba(5, 10, 13, 0.8);
   overflow-x: auto;
   scrollbar-width: none;
-  padding: 1rem 5% 4rem;
-  cursor: grab;
 }
 
-.gallery-track-container:active {
-  cursor: grabbing;
-}
-
-.gallery-track-container::-webkit-scrollbar {
+.emp-carousel-thumbs::-webkit-scrollbar {
   display: none;
 }
 
-.gallery-track {
-  display: flex;
-  gap: 2rem;
-  width: max-content;
+.emp-carousel-thumb {
+  flex: 0 0 120px;
+  height: 78px;
+  border-radius: 8px;
+  overflow: hidden;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: border-color 0.35s, transform 0.35s, opacity 0.35s;
+  opacity: 0.5;
 }
 
+.emp-carousel-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s;
+}
+
+.emp-carousel-thumb:hover {
+  opacity: 0.8;
+  transform: scale(1.03);
+}
+
+.emp-carousel-thumb:hover img {
+  transform: scale(1.07);
+}
+
+.emp-carousel-thumb.is-active {
+  border-color: var(--gold-color);
+  opacity: 1;
+  box-shadow: 0 0 16px rgba(201, 164, 97, 0.4);
+}
+
+/* Legacy gallery-item kept for consistency */
 .gallery-item {
   width: 420px;
   height: 550px;
@@ -1738,37 +1954,6 @@ h4,
   flex-shrink: 0;
   border: 1px solid rgba(255, 255, 255, 0.05);
   transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.5s ease;
-}
-
-.gallery-item::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(to top, rgba(11, 17, 20, 0.95), transparent 60%);
-  opacity: 0;
-  transition: opacity 0.5s ease;
-}
-
-.gallery-item:hover {
-  transform: translateY(-15px) scale(1.02);
-  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.6), 0 0 40px rgba(201, 164, 97, 0.15);
-  border-color: rgba(201, 164, 97, 0.3);
-}
-
-.gallery-item:hover::after {
-  opacity: 1;
-}
-
-.gallery-item img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
-  display: block;
-}
-
-.gallery-item:hover img {
-  transform: scale(1.1) rotate(1deg);
 }
 
 /* Lightbox */
@@ -2030,17 +2215,17 @@ h4,
 }
 
 .emp-cta-icon {
-  width: 90px;
-  height: 90px;
-  background: linear-gradient(135deg, rgba(201, 164, 97, 0.15) 0%, transparent 100%);
-  border: 1px solid rgba(201, 164, 97, 0.3);
+  width: 70px;
+  height: 70px;
+  background: linear-gradient(135deg, rgba(201, 164, 97, 0.12) 0%, transparent 100%);
+  border: 1px solid rgba(201, 164, 97, 0.25);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 0 auto 2rem;
+  margin: 0 auto 1.5rem;
   color: var(--gold-color);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
   transition: transform 0.4s ease;
 }
 
@@ -2121,6 +2306,16 @@ h4,
   .highlight-stat {
     flex: 1 1 50%;
     border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    padding: 1.5rem 1rem;
+  }
+
+  .emp-carousel-stage {
+    height: 55vh;
+  }
+
+  .emp-carousel-btn {
+    width: 46px;
+    height: 46px;
   }
 }
 
@@ -2174,6 +2369,38 @@ h4,
 
   .highlight-stat {
     flex: 1 1 100%;
+  }
+
+  .emp-carousel-stage {
+    height: 46vw;
+    min-height: 260px;
+  }
+
+  .emp-carousel-btn {
+    width: 38px;
+    height: 38px;
+  }
+
+  .emp-carousel-prev {
+    left: 0.6rem;
+  }
+
+  .emp-carousel-next {
+    right: 0.6rem;
+  }
+
+  .emp-carousel-counter {
+    bottom: 4.5rem;
+    left: 1rem;
+  }
+
+  #empSlideNum {
+    font-size: 1.8rem;
+  }
+
+  .emp-carousel-thumb {
+    flex: 0 0 80px;
+    height: 54px;
   }
 
   .btn-float span {

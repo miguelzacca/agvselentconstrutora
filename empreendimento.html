@@ -10,6 +10,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/swiper/11.0.5/swiper-bundle.min.css"/>
   <link rel="stylesheet" href="./style.css">
 </head>
 
@@ -127,30 +128,69 @@
 
     <!-- =============== GALLERY =============== -->
     <section id="galeria" class="emp-gallery">
-      <div class="emp-container emp-gallery-header">
+      <div class="emp-container emp-gallery-header" data-reveal>
         <h4 class="section-subtitle">Imagens</h4>
         <h2 class="emp-section-title">Galeria Exclusiva</h2>
       </div>
-      <div class="gallery-track-container">
-        <div class="gallery-track" id="emp-gallery-track">
-          <!-- populated by JS -->
+
+      <!-- Custom Carousel -->
+      <div class="emp-carousel" id="empCarousel">
+        <!-- Main Stage -->
+        <div class="emp-carousel-stage">
+          <div class="emp-carousel-track" id="empCarouselTrack">
+            <!-- populated by JS -->
+          </div>
+
+          <!-- Slide Counter -->
+          <div class="emp-carousel-counter">
+            <span id="empSlideNum">01</span>
+            <span class="emp-carousel-sep"></span>
+            <span id="empSlideTotal">03</span>
+          </div>
+
+          <!-- Navigation Arrows -->
+          <button class="emp-carousel-btn emp-carousel-prev" id="empCarouselPrev" aria-label="Anterior">
+            <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <polyline points="15 18 9 12 15 6"/>
+            </svg>
+          </button>
+          <button class="emp-carousel-btn emp-carousel-next" id="empCarouselNext" aria-label="Próxima">
+            <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <polyline points="9 18 15 12 9 6"/>
+            </svg>
+          </button>
+
+          <!-- Dot Indicators -->
+          <div class="emp-carousel-dots" id="empCarouselDots"></div>
+
+          <!-- Expand / Lightbox trigger -->
+          <button class="emp-carousel-expand" id="empExpandBtn" aria-label="Expandir">
+            <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/>
+              <line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/>
+            </svg>
+          </button>
         </div>
+
+        <!-- Thumbnail Strip -->
+        <div class="emp-carousel-thumbs" id="empCarouselThumbs"></div>
       </div>
+
       <!-- Lightbox -->
       <div class="emp-lightbox" id="empLightbox">
         <button class="lb-close" id="lbClose">
-          <svg width="28" height="28" fill="none" stroke="white" stroke-width="2" viewBox="0 0 24 24">
+          <svg width="24" height="24" fill="none" stroke="white" stroke-width="2" viewBox="0 0 24 24">
             <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
           </svg>
         </button>
         <button class="lb-nav lb-prev" id="lbPrev">
-          <svg width="28" height="28" fill="none" stroke="white" stroke-width="2" viewBox="0 0 24 24">
+          <svg width="24" height="24" fill="none" stroke="white" stroke-width="2" viewBox="0 0 24 24">
             <polyline points="15 18 9 12 15 6"/>
           </svg>
         </button>
         <img class="lb-img" id="lbImg" src="" alt="">
         <button class="lb-nav lb-next" id="lbNext">
-          <svg width="28" height="28" fill="none" stroke="white" stroke-width="2" viewBox="0 0 24 24">
+          <svg width="24" height="24" fill="none" stroke="white" stroke-width="2" viewBox="0 0 24 24">
             <polyline points="9 18 15 12 9 6"/>
           </svg>
         </button>
@@ -197,7 +237,7 @@
         <div class="emp-contact-cta">
           <div class="emp-cta-card">
             <div class="emp-cta-icon">
-              <svg width="40" height="40" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+              <svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
                 <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
                 <polyline points="9 22 9 12 15 12 15 22"/>
               </svg>
@@ -241,6 +281,7 @@
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/swiper/11.0.5/swiper-bundle.min.js"></script>
   <script src="./main.js"></script>
 </body>
 
