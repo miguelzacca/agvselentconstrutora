@@ -782,14 +782,14 @@ if (document.body.classList.contains('empreendimento-page')) {
   // 2. Hero entrance — cinematic
   const heroTl = gsap.timeline({ delay: 0.15 });
   heroTl
-    .from('.emp-hero-bg img', { scale: 1.18, filter: 'blur(12px)', duration: 2.2, ease: 'power3.out' })
-    .from('.emp-breadcrumb', { y: 24, opacity: 0, duration: 0.8, ease: 'power3.out' }, '-=1.8')
-    .from('.emp-badge', { scale: 0.85, opacity: 0, duration: 0.7, ease: 'back.out(1.7)' }, '-=1.4')
-    .from('.emp-title', { y: 50, opacity: 0, skewY: 3, filter: 'blur(6px)', duration: 1.1, ease: 'power4.out' }, '-=1.1')
-    .from('.emp-location', { x: -30, opacity: 0, duration: 0.7, ease: 'power3.out' }, '-=0.8')
-    .from('.emp-delivery', { opacity: 0, x: -20, duration: 0.6 }, '-=0.5')
-    .from('.emp-hero-actions > *', { opacity: 0, y: 25, duration: 0.7, stagger: 0.12, ease: 'back.out(1.4)' }, '-=0.4')
-    .from('.scroll-indicator', { opacity: 0, y: 20, duration: 1 }, '-=0.3');
+    .fromTo('.emp-hero-bg img', { scale: 1.18, filter: 'blur(12px)' }, { scale: 1, filter: 'blur(0px)', duration: 2.2, ease: 'power3.out' })
+    .fromTo('.emp-breadcrumb', { y: 24, opacity: 0 }, { y: 0, opacity: 1, duration: 0.8, ease: 'power3.out' }, '-=1.8')
+    .fromTo('.emp-badge', { scale: 0.85, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.7, ease: 'back.out(1.7)' }, '-=1.4')
+    .fromTo('.emp-title', { y: 50, opacity: 0, skewY: 3, filter: 'blur(6px)' }, { y: 0, opacity: 1, skewY: 0, filter: 'blur(0px)', duration: 1.1, ease: 'power4.out' }, '-=1.1')
+    .fromTo('.emp-location', { x: -30, opacity: 0 }, { x: 0, opacity: 1, duration: 0.7, ease: 'power3.out' }, '-=0.8')
+    .fromTo('.emp-delivery', { x: -20, opacity: 0 }, { x: 0, opacity: 1, duration: 0.6 }, '-=0.5')
+    .fromTo('.emp-hero-actions > *', { y: 25, opacity: 0 }, { y: 0, opacity: 1, duration: 0.7, stagger: 0.12, ease: 'back.out(1.4)' }, '-=0.4')
+    .fromTo('.scroll-indicator', { y: 20, opacity: 0 }, { y: 0, opacity: 1, duration: 1 }, '-=0.3');
 
   // 3. Hero multi-layer parallax
   if (!isMobile) {
