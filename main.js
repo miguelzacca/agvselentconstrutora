@@ -439,7 +439,6 @@ if (document.body.classList.contains('empreendimento-page')) {
         "https://dwvimagesv1.b-cdn.net/1632225100495_b7600f58-27c2-41fe-aa3c-f7d819ebfa43.jpeg?quality=100",
         "https://dwvimagesv1.b-cdn.net/1632225319340_44bc5d84-92e4-4974-8f0d-149702b1ee6a.jpeg?quality=100",
         "https://dwvimagesv1.b-cdn.net/1691182312109_5637443e-f229-49c1-ab62-14a52d695f22.jpg?quality=100",
-        "https://dwvimagesv1.b-cdn.net/1678449994245_13720d1c-3ac0-4dc0-a63b-55a95d06a4ac.png"
       ]
     },
     diamond: {
@@ -467,7 +466,6 @@ if (document.body.classList.contains('empreendimento-page')) {
         "https://dwvimagesv1.b-cdn.net/1632225319340_44bc5d84-92e4-4974-8f0d-149702b1ee6a.jpeg?quality=100",
         "https://dwvimagesv1.b-cdn.net/1632225100495_b7600f58-27c2-41fe-aa3c-f7d819ebfa43.jpeg?quality=100",
         "https://dwvimagesv1.b-cdn.net/1691182312109_5637443e-f229-49c1-ab62-14a52d695f22.jpg?quality=100",
-        "https://dwvimagesv1.b-cdn.net/1678449994245_13720d1c-3ac0-4dc0-a63b-55a95d06a4ac.png"
       ]
     },
     oceanview: {
@@ -495,7 +493,6 @@ if (document.body.classList.contains('empreendimento-page')) {
         "https://dwvimagesv1.b-cdn.net/1691182312109_5637443e-f229-49c1-ab62-14a52d695f22.jpg?quality=100",
         "https://dwvimagesv1.b-cdn.net/1632225100495_b7600f58-27c2-41fe-aa3c-f7d819ebfa43.jpeg?quality=100",
         "https://dwvimagesv1.b-cdn.net/1632225319340_44bc5d84-92e4-4974-8f0d-149702b1ee6a.jpeg?quality=100",
-        "https://dwvimagesv1.b-cdn.net/1678449994245_13720d1c-3ac0-4dc0-a63b-55a95d06a4ac.png"
       ]
     },
     nizuc: {
@@ -523,7 +520,6 @@ if (document.body.classList.contains('empreendimento-page')) {
         "https://dwvimagesv1.b-cdn.net/1678449994245_13720d1c-3ac0-4dc0-a63b-55a95d06a4ac.png",
         "https://dwvimagesv1.b-cdn.net/1632225100495_b7600f58-27c2-41fe-aa3c-f7d819ebfa43.jpeg?quality=100",
         "https://dwvimagesv1.b-cdn.net/1632225319340_44bc5d84-92e4-4974-8f0d-149702b1ee6a.jpeg?quality=100",
-        "https://dwvimagesv1.b-cdn.net/1691182312109_5637443e-f229-49c1-ab62-14a52d695f22.jpg?quality=100"
       ]
     }
   };
@@ -539,23 +535,23 @@ if (document.body.classList.contains('empreendimento-page')) {
   // Populate Meta & Breadcrumb
   document.getElementById('page-title').textContent = `${data.title} - AGV Selent`;
   document.getElementById('emp-breadcrumb-name').textContent = data.title;
-  
+
   // Populate Hero
   document.getElementById('emp-title').textContent = data.title;
   document.getElementById('emp-status').textContent = data.status;
   document.getElementById('emp-location').textContent = data.location;
-  if(data.delivery) {
+  if (data.delivery) {
     document.getElementById('emp-delivery-block').style.display = 'inline-flex';
     document.getElementById('emp-delivery-text').textContent = "Entrega: " + data.delivery;
   }
   document.getElementById('emp-hero-img').src = data.heroImg;
-  
+
   // Populate Details
   document.getElementById('emp-desc').innerHTML = data.desc;
 
   // Populate Highlights
   const highlightsContainer = document.getElementById('emp-highlights');
-  if(highlightsContainer) {
+  if (highlightsContainer) {
     highlightsContainer.innerHTML = '';
     data.highlights.forEach(h => {
       highlightsContainer.innerHTML += `
@@ -569,7 +565,7 @@ if (document.body.classList.contains('empreendimento-page')) {
 
   // Populate Features
   const featuresContainer = document.getElementById('emp-features');
-  if(featuresContainer) {
+  if (featuresContainer) {
     featuresContainer.innerHTML = '';
     data.features.forEach(f => {
       featuresContainer.innerHTML += `
@@ -584,7 +580,7 @@ if (document.body.classList.contains('empreendimento-page')) {
   // Populate Gallery
   const galleryContainer = document.getElementById('emp-gallery-track');
   let currentGalleryUrls = []; // store for lightbox
-  if(galleryContainer) {
+  if (galleryContainer) {
     galleryContainer.innerHTML = '';
     data.gallery.forEach((img, idx) => {
       currentGalleryUrls.push(img);
@@ -598,7 +594,7 @@ if (document.body.classList.contains('empreendimento-page')) {
 
   // --- PROGRESS BAR ---
   const pb = document.getElementById('empProgressBar');
-  if(pb) {
+  if (pb) {
     window.addEventListener('scroll', () => {
       const scrollY = window.scrollY;
       const docHeight = document.documentElement.scrollHeight - window.innerHeight;
@@ -622,7 +618,7 @@ if (document.body.classList.contains('empreendimento-page')) {
       lightbox.classList.add('active');
       document.body.style.overflow = 'hidden';
     }
-    
+
     function closeLightbox() {
       lightbox.classList.remove('active');
       document.body.style.overflow = '';
@@ -649,21 +645,21 @@ if (document.body.classList.contains('empreendimento-page')) {
     lbNext.addEventListener('click', lbGoNext);
     lbPrev.addEventListener('click', lbGoPrev);
     lightbox.addEventListener('click', (e) => {
-      if(e.target === lightbox) closeLightbox();
+      if (e.target === lightbox) closeLightbox();
     });
-    
+
     // Keyboard support
     document.addEventListener('keydown', (e) => {
-      if(!lightbox.classList.contains('active')) return;
-      if(e.key === 'Escape') closeLightbox();
-      if(e.key === 'ArrowRight') lbGoNext();
-      if(e.key === 'ArrowLeft') lbGoPrev();
+      if (!lightbox.classList.contains('active')) return;
+      if (e.key === 'Escape') closeLightbox();
+      if (e.key === 'ArrowRight') lbGoNext();
+      if (e.key === 'ArrowLeft') lbGoPrev();
     });
   }
 
   // --- DRAG TO SCROLL GALLERY ---
   const slider = document.querySelector('.gallery-track-container');
-  if(slider) {
+  if (slider) {
     let isDown = false;
     let startX;
     let scrollLeft;
@@ -687,12 +683,13 @@ if (document.body.classList.contains('empreendimento-page')) {
 
   // --- GSAP ANIMATIONS ---
   const heroTl = gsap.timeline({ delay: 0.2 });
-  heroTl.to('.emp-hero-content', { y: 0, opacity: 1, duration: 1.5, ease: 'power4.out' })
+  heroTl.from('.emp-hero-content', { y: 50, opacity: 0, duration: 1.5, ease: 'power4.out' })
     .from('.emp-title', { opacity: 0, y: 30, scale: 0.95, filter: 'blur(8px)', duration: 1.2, ease: 'power3.out' }, "-=1.2")
     .from('.emp-badge', { scale: 0.9, opacity: 0, duration: 0.6, ease: 'back.out(1.5)' }, "-=1")
     .from('.emp-delivery', { opacity: 0, x: -10, duration: 0.6 }, "-=0.8")
     .from('.emp-hero-actions > *', { opacity: 0, y: 20, duration: 0.8, stagger: 0.1, ease: 'power2.out' }, "-=0.6")
-    .from('.scroll-indicator', { opacity: 0, y: 20, duration: 1 }, "-=0.5");
+    .from('.scroll-indicator', { opacity: 0, y: 20, duration: 1 }, "-=0.5")
+    .from('.highlight-stat', { y: 30, opacity: 0, duration: 0.8, stagger: 0.15, ease: 'power3.out' }, "-=0.8");
 
   // Cinematic Hero Background reveal
   gsap.from('.emp-hero-bg img', { scale: 1.15, filter: 'blur(10px)', duration: 2, ease: 'power3.out' });
@@ -706,11 +703,6 @@ if (document.body.classList.contains('empreendimento-page')) {
       end: 'bottom top',
       scrub: 1
     }
-  });
-
-  gsap.from('.highlight-stat', {
-    y: 30, opacity: 0, duration: 0.8, stagger: 0.15, ease: 'power3.out',
-    scrollTrigger: { trigger: '.emp-highlights-bar', start: 'top 85%' }
   });
 
   gsap.from('.emp-info-left > *', {
