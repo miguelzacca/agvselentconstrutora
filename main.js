@@ -830,7 +830,7 @@ if (document.body.classList.contains('empreendimento-page')) {
   });
 
   // 7. Details left column stagger
-  gsap.from('.emp-info-left > *', {
+  gsap.from('.emp-info-left .emp-desc, .emp-info-left .emp-link-arrow', {
     y: 60, opacity: 0, duration: 1, stagger: 0.15, ease: 'power3.out',
     clearProps: 'all',
     scrollTrigger: { trigger: '.emp-details', start: 'top 80%', once: true }
@@ -857,11 +857,11 @@ if (document.body.classList.contains('empreendimento-page')) {
     item.addEventListener('mouseleave', () => sheen.style.backgroundPosition = '200% 0');
   });
 
-  // 9. Gallery header reveal
-  gsap.from('.emp-gallery-header > *', {
-    y: 40, opacity: 0, duration: 0.9, stagger: 0.2, ease: 'power3.out',
-    scrollTrigger: { trigger: '.emp-gallery', start: 'top 85%', once: true }
-  });
+  // 9. Gallery header reveal (Handled globally by rule 5)
+  // gsap.from('.emp-gallery-header > *', {
+  //  y: 40, opacity: 0, duration: 0.9, stagger: 0.2, ease: 'power3.out',
+  //  scrollTrigger: { trigger: '.emp-gallery', start: 'top 85%', once: true }
+  // });
 
   // Carousel stage entrance
   gsap.fromTo('.emp-carousel', {
