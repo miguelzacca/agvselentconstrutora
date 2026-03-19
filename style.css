@@ -1476,8 +1476,9 @@ h4,
 
 .emp-hero-actions {
   display: flex;
-  gap: 1.5rem;
+  gap: 1rem;
   flex-wrap: wrap;
+  align-items: center;
 }
 
 /* --- HIGHLIGHTS BAR --- */
@@ -1494,6 +1495,8 @@ h4,
   max-width: 1200px;
   margin: -3rem auto 0;
   border-radius: 16px;
+  /* prevent overflow on narrow screens */
+  width: calc(100% - 2 * 5%);
 }
 
 .emp-highlights-inner {
@@ -2247,55 +2250,107 @@ h4,
   font-weight: 300;
 }
 
-/* --- FLOATING CTA --- */
+/* --- FLOATING CTA (WhatsApp) --- */
 .floating-cta {
   position: fixed;
-  bottom: 2rem;
-  right: 2rem;
-  z-index: 200;
+  bottom: 1.75rem;
+  right: 1.75rem;
+  z-index: 500;
   opacity: 0;
   pointer-events: none;
-  transform: translateY(30px);
-  transition: opacity 0.5s ease, transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  transform: translateY(20px) scale(0.9);
+  transition: opacity 0.45s cubic-bezier(0.16, 1, 0.3, 1), transform 0.45s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .floating-cta.visible {
   opacity: 1;
   pointer-events: auto;
-  transform: translateY(0);
+  transform: translateY(0) scale(1);
 }
 
+/* The pill (desktop) */
 .btn-float {
-  padding: 1rem 2rem;
+  /* Remove gold styling – use WhatsApp green */
+  background: #25D366 !important;
+  border: none !important;
+  color: #fff !important;
+  padding: 0.9rem 1.75rem 0.9rem 1.35rem;
   border-radius: 50px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4), 0 0 20px rgba(201, 164, 97, 0.3);
+  box-shadow:
+    0 4px 24px rgba(37, 211, 102, 0.45),
+    0 1px 8px rgba(0, 0, 0, 0.35);
   display: flex;
   align-items: center;
-  gap: 0.7rem;
-  font-size: 0.9rem;
-  animation: floatPulse 2.5s infinite;
+  gap: 0.65rem;
+  font-size: 0.88rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-transform: none;
+  white-space: nowrap;
+  animation: waPulse 2.8s infinite;
+  transition: background 0.3s, box-shadow 0.3s, transform 0.3s !important;
 }
 
-@keyframes floatPulse {
+.btn-float:hover {
+  background: #1ebe5b !important;
+  box-shadow:
+    0 6px 32px rgba(37, 211, 102, 0.6),
+    0 2px 10px rgba(0, 0, 0, 0.4) !important;
+  transform: translateY(-3px) scale(1.04) !important;
+}
+
+/* Override the generic .btn::before sweep that doesn't look good in green */
+.btn-float::before {
+  background: linear-gradient(120deg, transparent 0%, rgba(255, 255, 255, 0.2) 50%, transparent 100%);
+}
+
+.btn-float svg {
+  flex-shrink: 0;
+  width: 22px;
+  height: 22px;
+  fill: #fff;
+  filter: none;
+}
+
+.btn-float .wa-label {
+  line-height: 1;
+}
+
+@keyframes waPulse {
   0% {
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4), 0 0 0 0 rgba(201, 164, 97, 0.4);
+    box-shadow: 0 4px 24px rgba(37, 211, 102, 0.45), 0 0 0 0 rgba(37, 211, 102, 0.45);
   }
 
-  70% {
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4), 0 0 0 15px rgba(201, 164, 97, 0);
+  65% {
+    box-shadow: 0 4px 24px rgba(37, 211, 102, 0.45), 0 0 0 14px rgba(37, 211, 102, 0);
   }
 
   100% {
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4), 0 0 0 0 rgba(201, 164, 97, 0);
+    box-shadow: 0 4px 24px rgba(37, 211, 102, 0.45), 0 0 0 0 rgba(37, 211, 102, 0);
   }
 }
 
 /* --- RESPONSIVE --- */
 @media (max-width: 1024px) {
 
+  .emp-highlights-bar {
+    width: calc(100% - 2 * 4%);
+    margin-left: auto;
+    margin-right: auto;
+  }
+
   .emp-details-grid,
   .emp-contact-inner {
     grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  /* Reduce extreme desktop gap */
+  .emp-details-grid {
+    gap: 3rem;
+  }
+
+  .emp-contact-inner {
     gap: 3rem;
   }
 
@@ -2317,15 +2372,23 @@ h4,
     width: 46px;
     height: 46px;
   }
+
+  .emp-hero-content {
+    padding: 0 4%;
+  }
 }
 
 @media (max-width: 768px) {
+
+  /* ── Hero ── */
   .emp-title {
-    font-size: clamp(2.2rem, 7vw, 3rem);
+    font-size: clamp(2rem, 8vw, 2.8rem);
+    letter-spacing: -0.5px;
   }
 
   .emp-hero {
     align-items: flex-end;
+    padding-bottom: 0;
   }
 
   .emp-hero-content {
@@ -2336,12 +2399,100 @@ h4,
   .emp-hero-overlay {
     background: linear-gradient(to top,
         rgba(11, 17, 20, 1) 0%,
-        rgba(11, 17, 20, 0.8) 50%,
+        rgba(11, 17, 20, 0.85) 45%,
         rgba(11, 17, 20, 0.4) 100%);
+  }
+
+  /* Hide scroll indicator on empreendimento mobile */
+  .empreendimento-page .scroll-indicator {
+    display: none;
+  }
+
+  .emp-breadcrumb {
+    font-size: 0.75rem;
+    flex-wrap: wrap;
+    gap: 0.3rem;
+    margin-bottom: 1.2rem;
+  }
+
+  .emp-badge {
+    font-size: 0.65rem;
+    padding: 0.4rem 1rem;
+    margin-bottom: 1.2rem;
+  }
+
+  .emp-location {
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+  }
+
+  .emp-hero-actions {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .emp-hero-actions .btn,
+  .emp-hero-actions .magnetic-wrap {
+    width: 100%;
+  }
+
+  .emp-hero-actions .btn {
+    text-align: center;
+    justify-content: center;
+  }
+
+  /* ── Highlights bar ── */
+  .emp-highlights-bar {
+    width: calc(100% - 2 * 5%);
+    margin-top: 2rem;
+    border-radius: 12px;
+  }
+
+  .highlight-stat {
+    flex: 1 1 50%;
+    border-right: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    padding: 1.4rem 1rem;
+  }
+
+  .highlight-stat:nth-child(even) {
+    border-left: 1px solid rgba(255, 255, 255, 0.06);
+  }
+
+  .highlight-stat-value {
+    font-size: 1.8rem;
+  }
+
+  /* ── Details ── */
+  .emp-details {
+    padding: 4rem 5% 4rem;
+  }
+
+  .emp-section-title {
+    font-size: clamp(2rem, 6vw, 2.8rem);
+  }
+
+  .emp-desc p {
+    font-size: 1.05rem;
   }
 
   .features-grid {
     grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .feature-item {
+    padding: 1.25rem;
+  }
+
+  /* ── Gallery ── */
+  .emp-gallery {
+    padding: 4rem 0 0;
+  }
+
+  .emp-gallery-header {
+    padding: 0 5%;
+    margin-bottom: 2rem;
   }
 
   .gallery-item {
@@ -2349,31 +2500,9 @@ h4,
     height: 360px;
   }
 
-  .emp-hero-actions {
-    flex-direction: column;
-  }
-
-  .emp-hero-actions .btn {
-    width: 100%;
-    text-align: center;
-    justify-content: center;
-  }
-
-  .lb-prev {
-    left: 0.5rem;
-  }
-
-  .lb-next {
-    right: 0.5rem;
-  }
-
-  .highlight-stat {
-    flex: 1 1 100%;
-  }
-
   .emp-carousel-stage {
-    height: 46vw;
-    min-height: 260px;
+    height: 56vw;
+    min-height: 240px;
   }
 
   .emp-carousel-btn {
@@ -2399,16 +2528,68 @@ h4,
   }
 
   .emp-carousel-thumb {
-    flex: 0 0 80px;
-    height: 54px;
+    flex: 0 0 72px;
+    height: 48px;
   }
 
-  .btn-float span {
+  /* ── Lightbox ── */
+  .lb-prev {
+    left: 0.5rem;
+  }
+
+  .lb-next {
+    right: 0.5rem;
+  }
+
+  .lb-img {
+    max-width: 95vw;
+    max-height: 80vh;
+  }
+
+  /* ── Location ── */
+  .emp-location-section {
+    padding: 4rem 5%;
+  }
+
+  /* ── Contact ── */
+  .emp-contact {
+    padding: 4rem 5%;
+  }
+
+  .emp-cta-card {
+    padding: 2.5rem 1.75rem;
+  }
+
+  .emp-cta-card h3 {
+    font-size: 1.8rem;
+  }
+
+  .emp-phone-link {
+    font-size: 1.05rem;
+    padding: 1.2rem 1.25rem;
+  }
+
+  /* ── Floating WA button: icon-only circle on mobile ── */
+  .floating-cta {
+    bottom: 1.25rem;
+    right: 1.25rem;
+  }
+
+  .btn-float .wa-label {
     display: none;
   }
 
   .btn-float {
-    padding: 1rem;
-    border-radius: 50%;
+    width: 58px;
+    height: 58px;
+    padding: 0;
+    border-radius: 50% !important;
+    justify-content: center;
+    animation: waPulse 2.8s infinite;
+  }
+
+  .btn-float svg {
+    width: 26px;
+    height: 26px;
   }
 }
