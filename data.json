@@ -1,0 +1,520 @@
+{
+  "props": {
+    "pageProps": {
+      "response": {
+        "data": {
+          "id": "b26a5870-9ec5-4fac-9dc3-93adf0a2829e",
+          "title": "Nizuc Residence",
+          "slug": "Residence",
+          "subtitle": "Residence",
+          "address": "R. 290, 0000\n  Meia Praia, Itapema/SC",
+          "catalogs": [],
+          "gps": "",
+          "latitude": -27.137471,
+          "longitude": -48.599019,
+          "percentage_work": 100,
+          "delivery_date": "dezembro 2023",
+          "primary_color": "#c96b28",
+          "secondary_color": "",
+          "features": [
+            {
+              "id": "21db653e-b06d-4911-bc4e-c2e6145cbbc7",
+              "tag": {
+                "tag": "gym",
+                "title": "Academia"
+              },
+              "type": {
+                "title": "Academia",
+                "type": "RE_DEVELOPMENT"
+              }
+            },
+            {
+              "id": "9efd6000-811b-452f-a713-d87e5fc61f04",
+              "tag": {
+                "tag": "playroom",
+                "title": "Sala de jogos"
+              },
+              "type": {
+                "title": "Sala de jogos",
+                "type": "RE_DEVELOPMENT"
+              }
+            },
+            {
+              "id": "2cf89626-91a1-4953-adf5-df4e4e6eb7f1",
+              "tag": {
+                "tag": "playground",
+                "title": "Playground"
+              },
+              "type": {
+                "title": "Playground",
+                "type": "RE_DEVELOPMENT"
+              }
+            },
+            {
+              "id": "0260ef00-6b4c-49f2-8c0d-c111141be8f0",
+              "tag": {
+                "tag": "party_room",
+                "title": "Salão de festas"
+              },
+              "type": {
+                "title": "Salão de festas",
+                "type": "RE_DEVELOPMENT"
+              }
+            },
+            {
+              "id": "a7ab09b3-15bc-4a88-8ca5-ef82afae18cd",
+              "tag": {
+                "tag": "toys_playroom",
+                "title": "Brinquedoteca"
+              },
+              "type": {
+                "title": "Brinquedoteca",
+                "type": "RE_DEVELOPMENT"
+              }
+            },
+            {
+              "id": "82a13b66-eadf-4fb8-9994-f1d60fdebb4d",
+              "tag": {
+                "tag": "pool",
+                "title": "Piscina"
+              },
+              "type": {
+                "title": "Piscina",
+                "type": "RE_DEVELOPMENT"
+              }
+            },
+            {
+              "id": "5afc6d97-5aea-4c79-bf17-d81700a0fe28",
+              "tag": {
+                "tag": "living",
+                "title": "Living"
+              },
+              "type": {
+                "title": "Living",
+                "type": "PROPERTY"
+              }
+            },
+            {
+              "id": "1201a78f-1293-4bde-892f-b0c3c6f4cb23",
+              "tag": {
+                "tag": "lavatory",
+                "title": "Lavabo"
+              },
+              "type": {
+                "title": "Lavabo",
+                "type": "PROPERTY"
+              }
+            },
+            {
+              "id": "4321bd62-9c37-4cdd-bee5-c9049fcf2c0f",
+              "tag": {
+                "tag": "Kitchen",
+                "title": "Cozinha"
+              },
+              "type": {
+                "title": "Cozinha",
+                "type": "PROPERTY"
+              }
+            },
+            {
+              "id": "43acbec8-5454-4773-90cd-ab5503ce68ba",
+              "tag": {
+                "tag": "service_area",
+                "title": "Área de Serviço"
+              },
+              "type": {
+                "title": "Área de Serviço",
+                "type": "PROPERTY"
+              }
+            },
+            {
+              "id": "663be668-b471-4f20-b6bc-43b6ef34e1ad",
+              "tag": {
+                "tag": "barbecue_grill",
+                "title": "Churrasqueira"
+              },
+              "type": {
+                "title": "Churrasqueira",
+                "type": "PROPERTY"
+              }
+            },
+            {
+              "id": "66ee96d2-d869-4246-885b-a4597747b812",
+              "tag": {
+                "tag": "balcony",
+                "title": "Sacada"
+              },
+              "type": {
+                "title": "Sacada",
+                "type": "PROPERTY"
+              }
+            }
+          ],
+          "logo": {
+            "url": "https://dwvimagesv1.b-cdn.net/1589455411286_e2cf089835138a809e665489ebf3cabbc4cb77d3fa3e01a0b3fcf6603fde5f1a.png",
+            "sizes": {
+              "small": "https://dwvimagesv1.b-cdn.net/1589455411286_e2cf089835138a809e665489ebf3cabbc4cb77d3fa3e01a0b3fcf6603fde5f1a.png",
+              "medium": "https://dwvimagesv1.b-cdn.net/1589455411286_e2cf089835138a809e665489ebf3cabbc4cb77d3fa3e01a0b3fcf6603fde5f1a.png",
+              "large": "https://dwvimagesv1.b-cdn.net/1589455411286_e2cf089835138a809e665489ebf3cabbc4cb77d3fa3e01a0b3fcf6603fde5f1a.png",
+              "circle": "https://dwvimagesv1.b-cdn.net/1589455411286_e2cf089835138a809e665489ebf3cabbc4cb77d3fa3e01a0b3fcf6603fde5f1a.png"
+            }
+          },
+          "cover": {
+            "url": "https://dwvimagesv1.b-cdn.net/1632225100495_b7600f58-27c2-41fe-aa3c-f7d819ebfa43.jpeg",
+            "sizes": {
+              "medium": "https://dwvimagesv1.b-cdn.net/1632225100495_b7600f58-27c2-41fe-aa3c-f7d819ebfa43.jpeg?width=320&quality=100",
+              "small": "https://dwvimagesv1.b-cdn.net/1632225100495_b7600f58-27c2-41fe-aa3c-f7d819ebfa43.jpeg?width=100&quality=100"
+            }
+          },
+          "tour_360": null,
+          "video": "",
+          "videos": [
+            {
+              "id": "9d544ad9-1f29-437b-801d-3c588b611142",
+              "url": "https://vz-093bee2c-414.b-cdn.net/dd91ba8a-bee4-4b1f-8548-810224d216c4/play_480p.mp4",
+              "thumbnail": null,
+              "title": "Novembro 2020"
+            },
+            {
+              "id": "10396102-25bc-4f2c-bae1-670b8aa41a38",
+              "url": "https://vz-093bee2c-414.b-cdn.net/d404db33-1a98-4d91-9d30-3dbe0d217f53/play_480p.mp4",
+              "thumbnail": null,
+              "title": "Julho 2020"
+            },
+            {
+              "id": "699ba8c8-f8ed-4d9b-929e-56ea8a0c0206",
+              "url": "https://vz-093bee2c-414.b-cdn.net/1a584787-638a-4283-bbd9-ced6c62b4abb/play_480p.mp4",
+              "thumbnail": null,
+              "title": "Janeiro 2021"
+            },
+            {
+              "id": "907070c7-3131-4cca-9a33-36aad014c72b",
+              "url": "https://vz-093bee2c-414.b-cdn.net/f7b282e4-2b14-4075-9efd-4e9041d5960e/play_480p.mp4",
+              "thumbnail": null,
+              "title": "Março 2021"
+            },
+            {
+              "id": "6a4f3695-6c32-4743-a35c-f8691cadc878",
+              "url": "https://vz-093bee2c-414.b-cdn.net/26062a3b-500c-4c26-a022-cc4e40bc3739/play_480p.mp4",
+              "thumbnail": null,
+              "title": "Abril 2021"
+            },
+            {
+              "id": "5f3624da-52fa-4027-b5a9-3213cbe12905",
+              "url": "https://vz-093bee2c-414.b-cdn.net/6ca00663-98b6-4248-9fa4-7a93c3748d42/play_480p.mp4",
+              "thumbnail": null,
+              "title": "Abril 2021"
+            },
+            {
+              "id": "47893e9a-d698-4b20-a368-3174288da1b8",
+              "url": "https://vz-093bee2c-414.b-cdn.net/7937e0a6-3253-463b-b6ea-af5a75e5b253/play_480p.mp4",
+              "thumbnail": null,
+              "title": "Julho 2021"
+            },
+            {
+              "id": "123a167a-2f26-4b7f-b8cb-09f114209641",
+              "url": "https://vz-093bee2c-414.b-cdn.net/a32efe85-2291-405f-a427-b589410b32ec/play_480p.mp4",
+              "thumbnail": null,
+              "title": "Setembro 2021"
+            },
+            {
+              "id": "f57ed455-f014-4998-a2a2-70163d7832ab",
+              "url": "https://vz-093bee2c-414.b-cdn.net/e2c00b6d-4842-404b-8add-917d7e3f6b93/play_480p.mp4",
+              "thumbnail": null,
+              "title": "Novembro 2021"
+            },
+            {
+              "id": "13611c00-84cf-4148-bc75-1be84e41ad69",
+              "url": "https://vz-093bee2c-414.b-cdn.net/9bcfa3c0-23b9-4b33-99a3-b2a9fd692c2b/play_480p.mp4",
+              "thumbnail": null,
+              "title": "Dezembro 2021"
+            },
+            {
+              "id": "f83c46d2-d91f-4885-a761-a17ed429e735",
+              "url": "https://vz-093bee2c-414.b-cdn.net/b0776604-e65b-4a23-a1d8-6b84718ecc32/play_480p.mp4",
+              "thumbnail": null,
+              "title": "Janeiro 2022"
+            },
+            {
+              "id": "2b70879a-3cc9-4eda-8864-d73834e26c4d",
+              "url": "https://vz-093bee2c-414.b-cdn.net/b49f0c90-e1f8-4903-a091-d68de7ba4db4/play_480p.mp4",
+              "thumbnail": null,
+              "title": "Fevereiro 2022"
+            },
+            {
+              "id": "fd234ea8-cc3f-423e-b608-e0dab3ff69e3",
+              "url": "https://vz-093bee2c-414.b-cdn.net/747e4a37-c473-4a53-93ff-acf5f265a9d1/play_480p.mp4",
+              "thumbnail": null,
+              "title": "Março 2022"
+            },
+            {
+              "id": "57fa3fc8-b2e0-4f1a-ae09-59d1876a4790",
+              "url": "https://vz-093bee2c-414.b-cdn.net/04de94f5-1659-4739-8b66-d1412753a3b5/play_480p.mp4",
+              "thumbnail": null,
+              "title": "Abril 2022"
+            },
+            {
+              "id": "0d9543bf-0009-42fe-8e49-0a3b6a759b5c",
+              "url": "https://vz-093bee2c-414.b-cdn.net/221b12e8-af7a-402d-8d6d-3a0a87848d57/play_480p.mp4",
+              "thumbnail": null,
+              "title": "Maio 2022"
+            },
+            {
+              "id": "010094ae-0d91-4815-af0f-f849f808848d",
+              "url": "https://vz-093bee2c-414.b-cdn.net/b03ec5ed-f4e1-472c-b433-d9217d339031/play_480p.mp4",
+              "thumbnail": null,
+              "title": "Julho 2022"
+            },
+            {
+              "id": "efed8e98-ac19-4f7d-b9b0-b3d9b138e0df",
+              "url": "https://vz-093bee2c-414.b-cdn.net/269a597e-23a9-4012-bd11-723a05583696/play_480p.mp4",
+              "thumbnail": null,
+              "title": "Setembro 2022"
+            },
+            {
+              "id": "022f1a62-367e-4b13-8290-3c74a49f0966",
+              "url": "https://vz-093bee2c-414.b-cdn.net/0ea1a3b9-cf04-48ee-8bc8-6527a984f99a/play_480p.mp4",
+              "thumbnail": null,
+              "title": "Nizuc Residence"
+            },
+            {
+              "id": "c967ce44-c10f-4449-8a65-bf682b2626ec",
+              "url": "https://vz-093bee2c-414.b-cdn.net/68c0c024-aca6-467c-b2c7-27f1f94163fa/play_480p.mp4",
+              "thumbnail": null,
+              "title": "Setembro 2020"
+            }
+          ],
+          "gm_videos": [],
+          "incorporation": "60989",
+          "album_vimeo": "",
+          "architectural_plans": [
+            {
+              "sizes": {
+                "small": "https://dwvimagesv1.b-cdn.net/upload/2018/11/TIPO.png",
+                "medium": "https://dwvimagesv1.b-cdn.net/upload/2018/11/TIPO.png",
+                "large": "https://dwvimagesv1.b-cdn.net/upload/2018/11/TIPO.png",
+                "bola": "https://dwvimagesv1.b-cdn.net/upload/2018/11/TIPO.png",
+                "listagem2": "https://dwvimagesv1.b-cdn.net/upload/2018/11/TIPO.png"
+              }
+            },
+            {
+              "sizes": {
+                "small": "https://dwvimagesv1.b-cdn.net/upload/2018/11/LAZER.png",
+                "medium": "https://dwvimagesv1.b-cdn.net/upload/2018/11/LAZER.png",
+                "large": "https://dwvimagesv1.b-cdn.net/upload/2018/11/LAZER.png",
+                "bola": "https://dwvimagesv1.b-cdn.net/upload/2018/11/LAZER.png",
+                "listagem2": "https://dwvimagesv1.b-cdn.net/upload/2018/11/LAZER.png"
+              }
+            }
+          ],
+          "work_monitoring": [],
+          "gallery": [
+            {
+              "sizes": {
+                "small": "https://dwvimagesv1.b-cdn.net/1677596157301_bf123764-9c06-49fc-8c21-be9b0a300886.jpg",
+                "medium": "https://dwvimagesv1.b-cdn.net/1677596157301_bf123764-9c06-49fc-8c21-be9b0a300886.jpg",
+                "large": "https://dwvimagesv1.b-cdn.net/1677596157301_bf123764-9c06-49fc-8c21-be9b0a300886.jpg",
+                "bola": "https://dwvimagesv1.b-cdn.net/1677596157301_bf123764-9c06-49fc-8c21-be9b0a300886.jpg",
+                "listagem2": "https://dwvimagesv1.b-cdn.net/1677596157301_bf123764-9c06-49fc-8c21-be9b0a300886.jpg"
+              }
+            },
+            {
+              "sizes": {
+                "small": "https://dwvimagesv1.b-cdn.net/1606488496878_5e19dd37-23aa-4d7f-9209-977784f9a37b.jpg",
+                "medium": "https://dwvimagesv1.b-cdn.net/1606488496878_5e19dd37-23aa-4d7f-9209-977784f9a37b.jpg",
+                "large": "https://dwvimagesv1.b-cdn.net/1606488496878_5e19dd37-23aa-4d7f-9209-977784f9a37b.jpg",
+                "bola": "https://dwvimagesv1.b-cdn.net/1606488496878_5e19dd37-23aa-4d7f-9209-977784f9a37b.jpg",
+                "listagem2": "https://dwvimagesv1.b-cdn.net/1606488496878_5e19dd37-23aa-4d7f-9209-977784f9a37b.jpg"
+              }
+            },
+            {
+              "sizes": {
+                "small": "https://dwvimagesv1.b-cdn.net/images/developments/b26a5870-9ec5-4fac-9dc3-93adf0a2829e/galleries/pictures/Imagem_do_WhatsApp_de_2024-05-21_a(s)_16.38.54_ee7ae5f1.jpg-name-bc1edb15748c951b231aabf45e43f3befe424afdb0c6581624ff37ccc5a60472.jpg",
+                "medium": "https://dwvimagesv1.b-cdn.net/images/developments/b26a5870-9ec5-4fac-9dc3-93adf0a2829e/galleries/pictures/Imagem_do_WhatsApp_de_2024-05-21_a(s)_16.38.54_ee7ae5f1.jpg-name-bc1edb15748c951b231aabf45e43f3befe424afdb0c6581624ff37ccc5a60472.jpg",
+                "large": "https://dwvimagesv1.b-cdn.net/images/developments/b26a5870-9ec5-4fac-9dc3-93adf0a2829e/galleries/pictures/Imagem_do_WhatsApp_de_2024-05-21_a(s)_16.38.54_ee7ae5f1.jpg-name-bc1edb15748c951b231aabf45e43f3befe424afdb0c6581624ff37ccc5a60472.jpg",
+                "bola": "https://dwvimagesv1.b-cdn.net/images/developments/b26a5870-9ec5-4fac-9dc3-93adf0a2829e/galleries/pictures/Imagem_do_WhatsApp_de_2024-05-21_a(s)_16.38.54_ee7ae5f1.jpg-name-bc1edb15748c951b231aabf45e43f3befe424afdb0c6581624ff37ccc5a60472.jpg",
+                "listagem2": "https://dwvimagesv1.b-cdn.net/images/developments/b26a5870-9ec5-4fac-9dc3-93adf0a2829e/galleries/pictures/Imagem_do_WhatsApp_de_2024-05-21_a(s)_16.38.54_ee7ae5f1.jpg-name-bc1edb15748c951b231aabf45e43f3befe424afdb0c6581624ff37ccc5a60472.jpg"
+              }
+            },
+            {
+              "sizes": {
+                "small": "https://dwvimagesv1.b-cdn.net/images/developments/b26a5870-9ec5-4fac-9dc3-93adf0a2829e/galleries/pictures/Imagem_do_WhatsApp_de_2024-05-21_a(s)_16.38.55_52eaaac1.jpg-name-95f6a3e5cb22b888420062e53a417acb8d878e43fb30cea62fb076dc08d3f67f.jpg",
+                "medium": "https://dwvimagesv1.b-cdn.net/images/developments/b26a5870-9ec5-4fac-9dc3-93adf0a2829e/galleries/pictures/Imagem_do_WhatsApp_de_2024-05-21_a(s)_16.38.55_52eaaac1.jpg-name-95f6a3e5cb22b888420062e53a417acb8d878e43fb30cea62fb076dc08d3f67f.jpg",
+                "large": "https://dwvimagesv1.b-cdn.net/images/developments/b26a5870-9ec5-4fac-9dc3-93adf0a2829e/galleries/pictures/Imagem_do_WhatsApp_de_2024-05-21_a(s)_16.38.55_52eaaac1.jpg-name-95f6a3e5cb22b888420062e53a417acb8d878e43fb30cea62fb076dc08d3f67f.jpg",
+                "bola": "https://dwvimagesv1.b-cdn.net/images/developments/b26a5870-9ec5-4fac-9dc3-93adf0a2829e/galleries/pictures/Imagem_do_WhatsApp_de_2024-05-21_a(s)_16.38.55_52eaaac1.jpg-name-95f6a3e5cb22b888420062e53a417acb8d878e43fb30cea62fb076dc08d3f67f.jpg",
+                "listagem2": "https://dwvimagesv1.b-cdn.net/images/developments/b26a5870-9ec5-4fac-9dc3-93adf0a2829e/galleries/pictures/Imagem_do_WhatsApp_de_2024-05-21_a(s)_16.38.55_52eaaac1.jpg-name-95f6a3e5cb22b888420062e53a417acb8d878e43fb30cea62fb076dc08d3f67f.jpg"
+              }
+            },
+            {
+              "sizes": {
+                "small": "https://dwvimagesv1.b-cdn.net/1619111500735_5afc6dbb-ae91-4dbc-a979-20607dff552f.jpg",
+                "medium": "https://dwvimagesv1.b-cdn.net/1619111500735_5afc6dbb-ae91-4dbc-a979-20607dff552f.jpg",
+                "large": "https://dwvimagesv1.b-cdn.net/1619111500735_5afc6dbb-ae91-4dbc-a979-20607dff552f.jpg",
+                "bola": "https://dwvimagesv1.b-cdn.net/1619111500735_5afc6dbb-ae91-4dbc-a979-20607dff552f.jpg",
+                "listagem2": "https://dwvimagesv1.b-cdn.net/1619111500735_5afc6dbb-ae91-4dbc-a979-20607dff552f.jpg"
+              }
+            },
+            {
+              "sizes": {
+                "small": "https://dwvimagesv1.b-cdn.net/images/developments/b26a5870-9ec5-4fac-9dc3-93adf0a2829e/galleries/pictures/Imagem_do_WhatsApp_de_2024-05-21_a(s)_16.39.03_0e3dcc60.jpg-name-98dc0d4ad769a46891eaf8449a97b8bf1c5682b33bc967bbbbddabfb1c260a83.jpg",
+                "medium": "https://dwvimagesv1.b-cdn.net/images/developments/b26a5870-9ec5-4fac-9dc3-93adf0a2829e/galleries/pictures/Imagem_do_WhatsApp_de_2024-05-21_a(s)_16.39.03_0e3dcc60.jpg-name-98dc0d4ad769a46891eaf8449a97b8bf1c5682b33bc967bbbbddabfb1c260a83.jpg",
+                "large": "https://dwvimagesv1.b-cdn.net/images/developments/b26a5870-9ec5-4fac-9dc3-93adf0a2829e/galleries/pictures/Imagem_do_WhatsApp_de_2024-05-21_a(s)_16.39.03_0e3dcc60.jpg-name-98dc0d4ad769a46891eaf8449a97b8bf1c5682b33bc967bbbbddabfb1c260a83.jpg",
+                "bola": "https://dwvimagesv1.b-cdn.net/images/developments/b26a5870-9ec5-4fac-9dc3-93adf0a2829e/galleries/pictures/Imagem_do_WhatsApp_de_2024-05-21_a(s)_16.39.03_0e3dcc60.jpg-name-98dc0d4ad769a46891eaf8449a97b8bf1c5682b33bc967bbbbddabfb1c260a83.jpg",
+                "listagem2": "https://dwvimagesv1.b-cdn.net/images/developments/b26a5870-9ec5-4fac-9dc3-93adf0a2829e/galleries/pictures/Imagem_do_WhatsApp_de_2024-05-21_a(s)_16.39.03_0e3dcc60.jpg-name-98dc0d4ad769a46891eaf8449a97b8bf1c5682b33bc967bbbbddabfb1c260a83.jpg"
+              }
+            },
+            {
+              "sizes": {
+                "small": "https://dwvimagesv1.b-cdn.net/images/developments/b26a5870-9ec5-4fac-9dc3-93adf0a2829e/galleries/pictures/Imagem_do_WhatsApp_de_2024-05-21_a(s)_16.39.02_90a73ffd.jpg-name-cb1a2ff8f5042a6a61d2d74531a2c29b6c538aa1687cbf0d8212382ff5f9df61.jpg",
+                "medium": "https://dwvimagesv1.b-cdn.net/images/developments/b26a5870-9ec5-4fac-9dc3-93adf0a2829e/galleries/pictures/Imagem_do_WhatsApp_de_2024-05-21_a(s)_16.39.02_90a73ffd.jpg-name-cb1a2ff8f5042a6a61d2d74531a2c29b6c538aa1687cbf0d8212382ff5f9df61.jpg",
+                "large": "https://dwvimagesv1.b-cdn.net/images/developments/b26a5870-9ec5-4fac-9dc3-93adf0a2829e/galleries/pictures/Imagem_do_WhatsApp_de_2024-05-21_a(s)_16.39.02_90a73ffd.jpg-name-cb1a2ff8f5042a6a61d2d74531a2c29b6c538aa1687cbf0d8212382ff5f9df61.jpg",
+                "bola": "https://dwvimagesv1.b-cdn.net/images/developments/b26a5870-9ec5-4fac-9dc3-93adf0a2829e/galleries/pictures/Imagem_do_WhatsApp_de_2024-05-21_a(s)_16.39.02_90a73ffd.jpg-name-cb1a2ff8f5042a6a61d2d74531a2c29b6c538aa1687cbf0d8212382ff5f9df61.jpg",
+                "listagem2": "https://dwvimagesv1.b-cdn.net/images/developments/b26a5870-9ec5-4fac-9dc3-93adf0a2829e/galleries/pictures/Imagem_do_WhatsApp_de_2024-05-21_a(s)_16.39.02_90a73ffd.jpg-name-cb1a2ff8f5042a6a61d2d74531a2c29b6c538aa1687cbf0d8212382ff5f9df61.jpg"
+              }
+            },
+            {
+              "sizes": {
+                "small": "https://dwvimagesv1.b-cdn.net/images/developments/b26a5870-9ec5-4fac-9dc3-93adf0a2829e/galleries/pictures/Imagem_do_WhatsApp_de_2024-05-21_a(s)_16.39.03_d74c3d17.jpg-name-e1568029e40af1dc8156abdb6d85a4fbc2b31eafeffdb4831b9a22ac81de4b95.jpg",
+                "medium": "https://dwvimagesv1.b-cdn.net/images/developments/b26a5870-9ec5-4fac-9dc3-93adf0a2829e/galleries/pictures/Imagem_do_WhatsApp_de_2024-05-21_a(s)_16.39.03_d74c3d17.jpg-name-e1568029e40af1dc8156abdb6d85a4fbc2b31eafeffdb4831b9a22ac81de4b95.jpg",
+                "large": "https://dwvimagesv1.b-cdn.net/images/developments/b26a5870-9ec5-4fac-9dc3-93adf0a2829e/galleries/pictures/Imagem_do_WhatsApp_de_2024-05-21_a(s)_16.39.03_d74c3d17.jpg-name-e1568029e40af1dc8156abdb6d85a4fbc2b31eafeffdb4831b9a22ac81de4b95.jpg",
+                "bola": "https://dwvimagesv1.b-cdn.net/images/developments/b26a5870-9ec5-4fac-9dc3-93adf0a2829e/galleries/pictures/Imagem_do_WhatsApp_de_2024-05-21_a(s)_16.39.03_d74c3d17.jpg-name-e1568029e40af1dc8156abdb6d85a4fbc2b31eafeffdb4831b9a22ac81de4b95.jpg",
+                "listagem2": "https://dwvimagesv1.b-cdn.net/images/developments/b26a5870-9ec5-4fac-9dc3-93adf0a2829e/galleries/pictures/Imagem_do_WhatsApp_de_2024-05-21_a(s)_16.39.03_d74c3d17.jpg-name-e1568029e40af1dc8156abdb6d85a4fbc2b31eafeffdb4831b9a22ac81de4b95.jpg"
+              }
+            },
+            {
+              "sizes": {
+                "small": "https://dwvimagesv1.b-cdn.net/images/developments/b26a5870-9ec5-4fac-9dc3-93adf0a2829e/galleries/pictures/Imagem_do_WhatsApp_de_2024-05-21_a(s)_16.39.04_6d7f959b.jpg-name-28a26f09c4eabab28a02757d2fa862fc8cc47e22a4a34a2e17cc6e9070bfdc48.jpg",
+                "medium": "https://dwvimagesv1.b-cdn.net/images/developments/b26a5870-9ec5-4fac-9dc3-93adf0a2829e/galleries/pictures/Imagem_do_WhatsApp_de_2024-05-21_a(s)_16.39.04_6d7f959b.jpg-name-28a26f09c4eabab28a02757d2fa862fc8cc47e22a4a34a2e17cc6e9070bfdc48.jpg",
+                "large": "https://dwvimagesv1.b-cdn.net/images/developments/b26a5870-9ec5-4fac-9dc3-93adf0a2829e/galleries/pictures/Imagem_do_WhatsApp_de_2024-05-21_a(s)_16.39.04_6d7f959b.jpg-name-28a26f09c4eabab28a02757d2fa862fc8cc47e22a4a34a2e17cc6e9070bfdc48.jpg",
+                "bola": "https://dwvimagesv1.b-cdn.net/images/developments/b26a5870-9ec5-4fac-9dc3-93adf0a2829e/galleries/pictures/Imagem_do_WhatsApp_de_2024-05-21_a(s)_16.39.04_6d7f959b.jpg-name-28a26f09c4eabab28a02757d2fa862fc8cc47e22a4a34a2e17cc6e9070bfdc48.jpg",
+                "listagem2": "https://dwvimagesv1.b-cdn.net/images/developments/b26a5870-9ec5-4fac-9dc3-93adf0a2829e/galleries/pictures/Imagem_do_WhatsApp_de_2024-05-21_a(s)_16.39.04_6d7f959b.jpg-name-28a26f09c4eabab28a02757d2fa862fc8cc47e22a4a34a2e17cc6e9070bfdc48.jpg"
+              }
+            },
+            {
+              "sizes": {
+                "small": "https://dwvimagesv1.b-cdn.net/images/developments/b26a5870-9ec5-4fac-9dc3-93adf0a2829e/galleries/pictures/Imagem_do_WhatsApp_de_2024-05-21_a(s)_16.39.02_36630cc6.jpg-name-ef5694e8e5b786dd3e303cab78605478af0da62468d8f0c6de2ec0990e13f30b.jpg",
+                "medium": "https://dwvimagesv1.b-cdn.net/images/developments/b26a5870-9ec5-4fac-9dc3-93adf0a2829e/galleries/pictures/Imagem_do_WhatsApp_de_2024-05-21_a(s)_16.39.02_36630cc6.jpg-name-ef5694e8e5b786dd3e303cab78605478af0da62468d8f0c6de2ec0990e13f30b.jpg",
+                "large": "https://dwvimagesv1.b-cdn.net/images/developments/b26a5870-9ec5-4fac-9dc3-93adf0a2829e/galleries/pictures/Imagem_do_WhatsApp_de_2024-05-21_a(s)_16.39.02_36630cc6.jpg-name-ef5694e8e5b786dd3e303cab78605478af0da62468d8f0c6de2ec0990e13f30b.jpg",
+                "bola": "https://dwvimagesv1.b-cdn.net/images/developments/b26a5870-9ec5-4fac-9dc3-93adf0a2829e/galleries/pictures/Imagem_do_WhatsApp_de_2024-05-21_a(s)_16.39.02_36630cc6.jpg-name-ef5694e8e5b786dd3e303cab78605478af0da62468d8f0c6de2ec0990e13f30b.jpg",
+                "listagem2": "https://dwvimagesv1.b-cdn.net/images/developments/b26a5870-9ec5-4fac-9dc3-93adf0a2829e/galleries/pictures/Imagem_do_WhatsApp_de_2024-05-21_a(s)_16.39.02_36630cc6.jpg-name-ef5694e8e5b786dd3e303cab78605478af0da62468d8f0c6de2ec0990e13f30b.jpg"
+              }
+            },
+            {
+              "sizes": {
+                "small": "https://dwvimagesv1.b-cdn.net/images/developments/b26a5870-9ec5-4fac-9dc3-93adf0a2829e/galleries/pictures/Imagem_do_WhatsApp_de_2024-05-21_a(s)_16.38.55_3ddb56ed.jpg-name-95befb8ca8b4bb37dbc3c237995e47f5361e5be7c26431e7edadbd13bcd82799.jpg",
+                "medium": "https://dwvimagesv1.b-cdn.net/images/developments/b26a5870-9ec5-4fac-9dc3-93adf0a2829e/galleries/pictures/Imagem_do_WhatsApp_de_2024-05-21_a(s)_16.38.55_3ddb56ed.jpg-name-95befb8ca8b4bb37dbc3c237995e47f5361e5be7c26431e7edadbd13bcd82799.jpg",
+                "large": "https://dwvimagesv1.b-cdn.net/images/developments/b26a5870-9ec5-4fac-9dc3-93adf0a2829e/galleries/pictures/Imagem_do_WhatsApp_de_2024-05-21_a(s)_16.38.55_3ddb56ed.jpg-name-95befb8ca8b4bb37dbc3c237995e47f5361e5be7c26431e7edadbd13bcd82799.jpg",
+                "bola": "https://dwvimagesv1.b-cdn.net/images/developments/b26a5870-9ec5-4fac-9dc3-93adf0a2829e/galleries/pictures/Imagem_do_WhatsApp_de_2024-05-21_a(s)_16.38.55_3ddb56ed.jpg-name-95befb8ca8b4bb37dbc3c237995e47f5361e5be7c26431e7edadbd13bcd82799.jpg",
+                "listagem2": "https://dwvimagesv1.b-cdn.net/images/developments/b26a5870-9ec5-4fac-9dc3-93adf0a2829e/galleries/pictures/Imagem_do_WhatsApp_de_2024-05-21_a(s)_16.38.55_3ddb56ed.jpg-name-95befb8ca8b4bb37dbc3c237995e47f5361e5be7c26431e7edadbd13bcd82799.jpg"
+              }
+            },
+            {
+              "sizes": {
+                "small": "https://dwvimagesv1.b-cdn.net/images/developments/b26a5870-9ec5-4fac-9dc3-93adf0a2829e/galleries/pictures/Imagem_do_WhatsApp_de_2024-05-21_a(s)_16.39.02_a2e6d83a.jpg-name-03e71a4591d29095f99eced77b355e471f959f7f090865d8b148c448199f9829.jpg",
+                "medium": "https://dwvimagesv1.b-cdn.net/images/developments/b26a5870-9ec5-4fac-9dc3-93adf0a2829e/galleries/pictures/Imagem_do_WhatsApp_de_2024-05-21_a(s)_16.39.02_a2e6d83a.jpg-name-03e71a4591d29095f99eced77b355e471f959f7f090865d8b148c448199f9829.jpg",
+                "large": "https://dwvimagesv1.b-cdn.net/images/developments/b26a5870-9ec5-4fac-9dc3-93adf0a2829e/galleries/pictures/Imagem_do_WhatsApp_de_2024-05-21_a(s)_16.39.02_a2e6d83a.jpg-name-03e71a4591d29095f99eced77b355e471f959f7f090865d8b148c448199f9829.jpg",
+                "bola": "https://dwvimagesv1.b-cdn.net/images/developments/b26a5870-9ec5-4fac-9dc3-93adf0a2829e/galleries/pictures/Imagem_do_WhatsApp_de_2024-05-21_a(s)_16.39.02_a2e6d83a.jpg-name-03e71a4591d29095f99eced77b355e471f959f7f090865d8b148c448199f9829.jpg",
+                "listagem2": "https://dwvimagesv1.b-cdn.net/images/developments/b26a5870-9ec5-4fac-9dc3-93adf0a2829e/galleries/pictures/Imagem_do_WhatsApp_de_2024-05-21_a(s)_16.39.02_a2e6d83a.jpg-name-03e71a4591d29095f99eced77b355e471f959f7f090865d8b148c448199f9829.jpg"
+              }
+            },
+            {
+              "sizes": {
+                "small": "https://dwvimagesv1.b-cdn.net/images/developments/b26a5870-9ec5-4fac-9dc3-93adf0a2829e/galleries/pictures/Imagem_do_WhatsApp_de_2024-05-21_a(s)_16.38.55_9a7e8859.jpg-name-7b12bf93df2e284a17ff7ce95a8fefa593120b72601214b1ec875b605de29a83.jpg",
+                "medium": "https://dwvimagesv1.b-cdn.net/images/developments/b26a5870-9ec5-4fac-9dc3-93adf0a2829e/galleries/pictures/Imagem_do_WhatsApp_de_2024-05-21_a(s)_16.38.55_9a7e8859.jpg-name-7b12bf93df2e284a17ff7ce95a8fefa593120b72601214b1ec875b605de29a83.jpg",
+                "large": "https://dwvimagesv1.b-cdn.net/images/developments/b26a5870-9ec5-4fac-9dc3-93adf0a2829e/galleries/pictures/Imagem_do_WhatsApp_de_2024-05-21_a(s)_16.38.55_9a7e8859.jpg-name-7b12bf93df2e284a17ff7ce95a8fefa593120b72601214b1ec875b605de29a83.jpg",
+                "bola": "https://dwvimagesv1.b-cdn.net/images/developments/b26a5870-9ec5-4fac-9dc3-93adf0a2829e/galleries/pictures/Imagem_do_WhatsApp_de_2024-05-21_a(s)_16.38.55_9a7e8859.jpg-name-7b12bf93df2e284a17ff7ce95a8fefa593120b72601214b1ec875b605de29a83.jpg",
+                "listagem2": "https://dwvimagesv1.b-cdn.net/images/developments/b26a5870-9ec5-4fac-9dc3-93adf0a2829e/galleries/pictures/Imagem_do_WhatsApp_de_2024-05-21_a(s)_16.38.55_9a7e8859.jpg-name-7b12bf93df2e284a17ff7ce95a8fefa593120b72601214b1ec875b605de29a83.jpg"
+              }
+            },
+            {
+              "sizes": {
+                "small": "https://dwvimagesv1.b-cdn.net/images/developments/b26a5870-9ec5-4fac-9dc3-93adf0a2829e/galleries/pictures/Imagem_do_WhatsApp_de_2024-05-21_a(s)_16.39.04_1fbd18dd.jpg-name-2fd4b0a15d9b9dd45056825d760465753afddd08b22676d95a0f89015fdb36b6.jpg",
+                "medium": "https://dwvimagesv1.b-cdn.net/images/developments/b26a5870-9ec5-4fac-9dc3-93adf0a2829e/galleries/pictures/Imagem_do_WhatsApp_de_2024-05-21_a(s)_16.39.04_1fbd18dd.jpg-name-2fd4b0a15d9b9dd45056825d760465753afddd08b22676d95a0f89015fdb36b6.jpg",
+                "large": "https://dwvimagesv1.b-cdn.net/images/developments/b26a5870-9ec5-4fac-9dc3-93adf0a2829e/galleries/pictures/Imagem_do_WhatsApp_de_2024-05-21_a(s)_16.39.04_1fbd18dd.jpg-name-2fd4b0a15d9b9dd45056825d760465753afddd08b22676d95a0f89015fdb36b6.jpg",
+                "bola": "https://dwvimagesv1.b-cdn.net/images/developments/b26a5870-9ec5-4fac-9dc3-93adf0a2829e/galleries/pictures/Imagem_do_WhatsApp_de_2024-05-21_a(s)_16.39.04_1fbd18dd.jpg-name-2fd4b0a15d9b9dd45056825d760465753afddd08b22676d95a0f89015fdb36b6.jpg",
+                "listagem2": "https://dwvimagesv1.b-cdn.net/images/developments/b26a5870-9ec5-4fac-9dc3-93adf0a2829e/galleries/pictures/Imagem_do_WhatsApp_de_2024-05-21_a(s)_16.39.04_1fbd18dd.jpg-name-2fd4b0a15d9b9dd45056825d760465753afddd08b22676d95a0f89015fdb36b6.jpg"
+              }
+            },
+            {
+              "sizes": {
+                "small": "https://dwvimagesv1.b-cdn.net/images/developments/b26a5870-9ec5-4fac-9dc3-93adf0a2829e/galleries/pictures/Imagem_do_WhatsApp_de_2024-05-21_a(s)_16.39.03_7e470f1e.jpg-name-f8567568a6d9257ba2afdfeea3509e3d3cc0ca32c23c785dcca693f2d5f97856.jpg",
+                "medium": "https://dwvimagesv1.b-cdn.net/images/developments/b26a5870-9ec5-4fac-9dc3-93adf0a2829e/galleries/pictures/Imagem_do_WhatsApp_de_2024-05-21_a(s)_16.39.03_7e470f1e.jpg-name-f8567568a6d9257ba2afdfeea3509e3d3cc0ca32c23c785dcca693f2d5f97856.jpg",
+                "large": "https://dwvimagesv1.b-cdn.net/images/developments/b26a5870-9ec5-4fac-9dc3-93adf0a2829e/galleries/pictures/Imagem_do_WhatsApp_de_2024-05-21_a(s)_16.39.03_7e470f1e.jpg-name-f8567568a6d9257ba2afdfeea3509e3d3cc0ca32c23c785dcca693f2d5f97856.jpg",
+                "bola": "https://dwvimagesv1.b-cdn.net/images/developments/b26a5870-9ec5-4fac-9dc3-93adf0a2829e/galleries/pictures/Imagem_do_WhatsApp_de_2024-05-21_a(s)_16.39.03_7e470f1e.jpg-name-f8567568a6d9257ba2afdfeea3509e3d3cc0ca32c23c785dcca693f2d5f97856.jpg",
+                "listagem2": "https://dwvimagesv1.b-cdn.net/images/developments/b26a5870-9ec5-4fac-9dc3-93adf0a2829e/galleries/pictures/Imagem_do_WhatsApp_de_2024-05-21_a(s)_16.39.03_7e470f1e.jpg-name-f8567568a6d9257ba2afdfeea3509e3d3cc0ca32c23c785dcca693f2d5f97856.jpg"
+              }
+            }
+          ],
+          "additional_galleries": [],
+          "construtora_pixel": null,
+          "other_buildings": [],
+          "descricao": [
+            {
+              "title": "Empreendimento",
+              "items": [
+                {
+                  "item": "Piscina"
+                },
+                {
+                  "item": "Salão de festas"
+                },
+                {
+                  "item": "Academia"
+                },
+                {
+                  "item": "Sala de jogos"
+                },
+                {
+                  "item": "Playground "
+                },
+                {
+                  "item": "Brinquedoteca "
+                }
+              ]
+            },
+            {
+              "title": "Unidade",
+              "items": [
+                {
+                  "item": "03 Suítes"
+                },
+                {
+                  "item": "Sacada com churrasqueira"
+                },
+                {
+                  "item": "Cozinha"
+                },
+                {
+                  "item": "Living"
+                },
+                {
+                  "item": "Área de serviço"
+                },
+                {
+                  "item": "Lavabo"
+                },
+                {
+                  "item": "02 ou 03 Vagas de garagem"
+                }
+              ]
+            }
+          ],
+          "real_estate_broker": null
+        },
+        "canonnicalUrl": "https://hotsite.dwvapp.com.br/landingpage/b26a5870-9ec5-4fac-9dc3-93adf0a2829e",
+        "otherReDevelopments": []
+      }
+    },
+    "__N_SSP": true
+  },
+  "page": "/landingpage/[...id]",
+  "query": {
+    "id": [
+      "b26a5870-9ec5-4fac-9dc3-93adf0a2829e"
+    ]
+  },
+  "buildId": "7OU2XFq_yzHcDyrqtljsb",
+  "isFallback": false,
+  "gssp": true,
+  "scriptLoader": []
+}

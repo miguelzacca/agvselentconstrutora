@@ -10,7 +10,10 @@ gsap.registerPlugin(ScrollTrigger);
 const canvas = document.createElement('canvas');
 canvas.id = 'particleCanvas';
 canvas.style.cssText = `position:absolute;top:0;left:0;width:100%;height:100%;z-index:0;pointer-events:none;`;
-document.querySelector('.hero').appendChild(canvas);
+const heroSection = document.querySelector('.hero, .emp-hero');
+if (heroSection) {
+  heroSection.appendChild(canvas);
+}
 
 const ctx = canvas.getContext('2d');
 let particles = [];
@@ -212,7 +215,7 @@ ScrollTrigger.create({
         val: target,
         duration: 2.5,
         ease: 'power3.out',
-        onUpdate: function() {
+        onUpdate: function () {
           counter.textContent = Math.ceil(this.targets()[0].val);
         }
       });
@@ -405,3 +408,367 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     }
   });
 });
+
+// =============================================
+// 18. EMPREENDIMENTO DYNAMICS
+// =============================================
+if (document.body.classList.contains('empreendimento-page')) {
+  const projectsData = {
+    esmeralda: {
+      title: "Residencial Esmeralda",
+      status: "Lançamento",
+      location: "Meia Praia, Itapema - SC",
+      delivery: "Dezembro 2026",
+      desc: "<p>Inspirado na preciosidade da pedra que lhe dá nome, o Residencial Esmeralda oferece uma experiência única de moradia. Arquitetura neoclássica aliada a um design funcional e ambientes integrados.</p><p>Viva momentos inesquecíveis com sua família em uma área de lazer completa e decorada com requinte, entregando conforto e segurança no melhor bairro de Itapema.</p>",
+      heroImg: "https://dwvimagesv1.b-cdn.net/1632225100495_b7600f58-27c2-41fe-aa3c-f7d819ebfa43.jpeg?width=1020&quality=100",
+      highlights: [
+        { value: "3", label: "Suítes" },
+        { value: "2", label: "Vagas" },
+        { value: "115m²", label: "Privativos" },
+        { value: "2026", label: "Entrega" }
+      ],
+      features: [
+        { icon: "🛏️", text: "3 Suítes Plenas" },
+        { icon: "🚗", text: "2 Vagas de Garagem" },
+        { icon: "🏊", text: "Lazer Completo Decorado" },
+        { icon: "🍖", text: "Espaço Gourmet com Churrasqueira" },
+        { icon: "🏋️", text: "Academia Climatizada" },
+        { icon: "🎥", text: "Cinema e Salão de Jogos" }
+      ],
+      gallery: [
+        "https://dwvimagesv1.b-cdn.net/1632225100495_b7600f58-27c2-41fe-aa3c-f7d819ebfa43.jpeg?quality=100",
+        "https://dwvimagesv1.b-cdn.net/1632225319340_44bc5d84-92e4-4974-8f0d-149702b1ee6a.jpeg?quality=100",
+        "https://dwvimagesv1.b-cdn.net/1691182312109_5637443e-f229-49c1-ab62-14a52d695f22.jpg?quality=100",
+        "https://dwvimagesv1.b-cdn.net/1678449994245_13720d1c-3ac0-4dc0-a63b-55a95d06a4ac.png"
+      ]
+    },
+    diamond: {
+      title: "Residencial Diamond",
+      status: "Pronto para morar",
+      location: "Centro, Itapema - SC",
+      delivery: "Pronto",
+      desc: "<p>O Residencial Diamond reflete o que há de mais brilhante na construção civil. Uma jóia esculpida no coração de Itapema, com acabamentos impecáveis e localização privilegiada.</p><p>Ideal para quem não abre mão do conforto, conveniência e de um estilo de vida exclusivo, a apenas poucos passos do mar e cercado pela melhor infraestrutura.</p>",
+      heroImg: "https://dwvimagesv1.b-cdn.net/1632225319340_44bc5d84-92e4-4974-8f0d-149702b1ee6a.jpeg?width=1020&quality=100",
+      highlights: [
+        { value: "4", label: "Suítes" },
+        { value: "3", label: "Vagas" },
+        { value: "145m²", label: "Privativos" },
+        { value: "100%", label: "Concluído" }
+      ],
+      features: [
+        { icon: "🛏️", text: "4 Suítes, sendo 1 Master" },
+        { icon: "🚗", text: "3 Vagas Lado a Lado" },
+        { icon: "🏋️", text: "Academia Premium e Pilates" },
+        { icon: "🌊", text: "Vista Panorâmica para o Mar" },
+        { icon: "🍷", text: "Adega e Espaço Whisky" },
+        { icon: "🔒", text: "Portaria 24h e Biometria" }
+      ],
+      gallery: [
+        "https://dwvimagesv1.b-cdn.net/1632225319340_44bc5d84-92e4-4974-8f0d-149702b1ee6a.jpeg?quality=100",
+        "https://dwvimagesv1.b-cdn.net/1632225100495_b7600f58-27c2-41fe-aa3c-f7d819ebfa43.jpeg?quality=100",
+        "https://dwvimagesv1.b-cdn.net/1691182312109_5637443e-f229-49c1-ab62-14a52d695f22.jpg?quality=100",
+        "https://dwvimagesv1.b-cdn.net/1678449994245_13720d1c-3ac0-4dc0-a63b-55a95d06a4ac.png"
+      ]
+    },
+    oceanview: {
+      title: "Ocean View Residence",
+      status: "Em obras",
+      location: "Meia Praia, Itapema - SC",
+      delivery: "Fevereiro 2027",
+      desc: "<p>Desperte todos os dias com o som das ondas e uma vista espetacular. O Ocean View Residence é o encontro perfeito entre a natureza exuberante de Itapema e o alto padrão AGV Selent.</p><p>Um projeto pensado para proporcionar o máximo de bem-estar e contato com o mar, oferecendo sacadas generosas e plantas de altíssima adaptabilidade.</p>",
+      heroImg: "https://dwvimagesv1.b-cdn.net/1691182312109_5637443e-f229-49c1-ab62-14a52d695f22.jpg?width=1020&quality=100",
+      highlights: [
+        { value: "3/4", label: "Suítes" },
+        { value: "3", label: "Vagas" },
+        { value: "160m²", label: "Privativos" },
+        { value: "2027", label: "Entrega" }
+      ],
+      features: [
+        { icon: "🛏️", text: "Opções de 3 ou 4 Suítes" },
+        { icon: "🚗", text: "Até 3 Vagas de Garagem" },
+        { icon: "🌅", text: "Frente Mar e Pe Direito Alto" },
+        { icon: "🍷", text: "Adega e Lounge Integrado" },
+        { icon: "🧖", text: "Spa Relaxante e Sauna" },
+        { icon: "⚽", text: "Quadra Poliesportiva" }
+      ],
+      gallery: [
+        "https://dwvimagesv1.b-cdn.net/1691182312109_5637443e-f229-49c1-ab62-14a52d695f22.jpg?quality=100",
+        "https://dwvimagesv1.b-cdn.net/1632225100495_b7600f58-27c2-41fe-aa3c-f7d819ebfa43.jpeg?quality=100",
+        "https://dwvimagesv1.b-cdn.net/1632225319340_44bc5d84-92e4-4974-8f0d-149702b1ee6a.jpeg?quality=100",
+        "https://dwvimagesv1.b-cdn.net/1678449994245_13720d1c-3ac0-4dc0-a63b-55a95d06a4ac.png"
+      ]
+    },
+    nizuc: {
+      title: "Nizuc Residence",
+      status: "OBRA CONCLUIDA",
+      location: "Itapema - SC",
+      delivery: "Pronto",
+      desc: "<p>Inspirado na exclusividade dos mais luxuosos resorts de Cancun, o Nizuc Residence traz para Itapema um conceito de moradia que transcende o ordinário.</p><p>Arquitetura contemporânea, áreas de lazer que parecem verdadeiros oásis e um cuidado ímpar com a qualidade construtiva, oferecendo um refúgio de paz em um dos metros quadrados mais desejados do Brasil.</p>",
+      heroImg: "https://dwvimagesv1.b-cdn.net/1678449994245_13720d1c-3ac0-4dc0-a63b-55a95d06a4ac.png",
+      highlights: [
+        { value: "4", label: "Suítes" },
+        { value: "3", label: "Vagas" },
+        { value: "190m²", label: "Privativos" },
+        { value: "Oásis", label: "Design" }
+      ],
+      features: [
+        { icon: "🛏️", text: "4 Suítes Master Premium" },
+        { icon: "🚗", text: "3 Vagas Livres" },
+        { icon: "💎", text: "Acabamento Alto Padrão" },
+        { icon: "🏊‍♂️", text: "Piscina com Borda Infinita" },
+        { icon: "🌴", text: "Praça de Fogo e Solarium" },
+        { icon: "🍾", text: "Salão de Festas Climatizado" }
+      ],
+      gallery: [
+        "https://dwvimagesv1.b-cdn.net/1678449994245_13720d1c-3ac0-4dc0-a63b-55a95d06a4ac.png",
+        "https://dwvimagesv1.b-cdn.net/1632225100495_b7600f58-27c2-41fe-aa3c-f7d819ebfa43.jpeg?quality=100",
+        "https://dwvimagesv1.b-cdn.net/1632225319340_44bc5d84-92e4-4974-8f0d-149702b1ee6a.jpeg?quality=100",
+        "https://dwvimagesv1.b-cdn.net/1691182312109_5637443e-f229-49c1-ab62-14a52d695f22.jpg?quality=100"
+      ]
+    }
+  };
+
+  const urlParams = new URLSearchParams(window.location.search);
+  let projectId = urlParams.get('id');
+  if (!projectId || !projectsData[projectId]) {
+    projectId = 'nizuc'; // fallback
+  }
+
+  const data = projectsData[projectId];
+
+  // Populate Meta & Breadcrumb
+  document.getElementById('page-title').textContent = `${data.title} - AGV Selent`;
+  document.getElementById('emp-breadcrumb-name').textContent = data.title;
+  
+  // Populate Hero
+  document.getElementById('emp-title').textContent = data.title;
+  document.getElementById('emp-status').textContent = data.status;
+  document.getElementById('emp-location').textContent = data.location;
+  if(data.delivery) {
+    document.getElementById('emp-delivery-block').style.display = 'inline-flex';
+    document.getElementById('emp-delivery-text').textContent = "Entrega: " + data.delivery;
+  }
+  document.getElementById('emp-hero-img').src = data.heroImg;
+  
+  // Populate Details
+  document.getElementById('emp-desc').innerHTML = data.desc;
+
+  // Populate Highlights
+  const highlightsContainer = document.getElementById('emp-highlights');
+  if(highlightsContainer) {
+    highlightsContainer.innerHTML = '';
+    data.highlights.forEach(h => {
+      highlightsContainer.innerHTML += `
+        <div class="highlight-stat">
+          <span class="highlight-stat-value">${h.value}</span>
+          <span class="highlight-stat-label">${h.label}</span>
+        </div>
+      `;
+    });
+  }
+
+  // Populate Features
+  const featuresContainer = document.getElementById('emp-features');
+  if(featuresContainer) {
+    featuresContainer.innerHTML = '';
+    data.features.forEach(f => {
+      featuresContainer.innerHTML += `
+        <div class="feature-item">
+          <span class="feature-icon">${f.icon}</span>
+          <span class="feature-text">${f.text}</span>
+        </div>
+      `;
+    });
+  }
+
+  // Populate Gallery
+  const galleryContainer = document.getElementById('emp-gallery-track');
+  let currentGalleryUrls = []; // store for lightbox
+  if(galleryContainer) {
+    galleryContainer.innerHTML = '';
+    data.gallery.forEach((img, idx) => {
+      currentGalleryUrls.push(img);
+      galleryContainer.innerHTML += `
+        <div class="gallery-item" data-index="${idx}">
+          <img src="${img}" alt="Galeria">
+        </div>
+      `;
+    });
+  }
+
+  // --- PROGRESS BAR ---
+  const pb = document.getElementById('empProgressBar');
+  if(pb) {
+    window.addEventListener('scroll', () => {
+      const scrollY = window.scrollY;
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const p = (scrollY / docHeight) * 100;
+      pb.style.width = p + '%';
+    }, { passive: true });
+  }
+
+  // --- LIGHTBOX LOGIC ---
+  const lightbox = document.getElementById('empLightbox');
+  const lbImg = document.getElementById('lbImg');
+  const lbClose = document.getElementById('lbClose');
+  const lbPrev = document.getElementById('lbPrev');
+  const lbNext = document.getElementById('lbNext');
+  let currentImgIndex = 0;
+
+  if (lightbox) {
+    function openLightbox(idx) {
+      currentImgIndex = idx;
+      lbImg.src = currentGalleryUrls[idx];
+      lightbox.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+    
+    function closeLightbox() {
+      lightbox.classList.remove('active');
+      document.body.style.overflow = '';
+      setTimeout(() => { lbImg.src = ''; }, 400); // clear after animation
+    }
+
+    function lbGoNext() {
+      currentImgIndex = (currentImgIndex + 1) % currentGalleryUrls.length;
+      lbImg.src = currentGalleryUrls[currentImgIndex];
+    }
+
+    function lbGoPrev() {
+      currentImgIndex = (currentImgIndex - 1 + currentGalleryUrls.length) % currentGalleryUrls.length;
+      lbImg.src = currentGalleryUrls[currentImgIndex];
+    }
+
+    document.querySelectorAll('.gallery-item').forEach(item => {
+      item.addEventListener('click', () => {
+        openLightbox(parseInt(item.dataset.index));
+      });
+    });
+
+    lbClose.addEventListener('click', closeLightbox);
+    lbNext.addEventListener('click', lbGoNext);
+    lbPrev.addEventListener('click', lbGoPrev);
+    lightbox.addEventListener('click', (e) => {
+      if(e.target === lightbox) closeLightbox();
+    });
+    
+    // Keyboard support
+    document.addEventListener('keydown', (e) => {
+      if(!lightbox.classList.contains('active')) return;
+      if(e.key === 'Escape') closeLightbox();
+      if(e.key === 'ArrowRight') lbGoNext();
+      if(e.key === 'ArrowLeft') lbGoPrev();
+    });
+  }
+
+  // --- DRAG TO SCROLL GALLERY ---
+  const slider = document.querySelector('.gallery-track-container');
+  if(slider) {
+    let isDown = false;
+    let startX;
+    let scrollLeft;
+
+    slider.addEventListener('mousedown', (e) => {
+      isDown = true;
+      slider.classList.add('active');
+      startX = e.pageX - slider.offsetLeft;
+      scrollLeft = slider.scrollLeft;
+    });
+    slider.addEventListener('mouseleave', () => { isDown = false; slider.classList.remove('active'); });
+    slider.addEventListener('mouseup', () => { isDown = false; slider.classList.remove('active'); });
+    slider.addEventListener('mousemove', (e) => {
+      if (!isDown) return;
+      e.preventDefault();
+      const x = e.pageX - slider.offsetLeft;
+      const walk = (x - startX) * 2; // scroll-fast
+      slider.scrollLeft = scrollLeft - walk;
+    });
+  }
+
+  // --- GSAP ANIMATIONS ---
+  const heroTl = gsap.timeline({ delay: 0.2 });
+  heroTl.to('.emp-hero-content', { y: 0, opacity: 1, duration: 1.5, ease: 'power4.out' })
+    .from('.emp-title', { opacity: 0, y: 30, scale: 0.95, filter: 'blur(8px)', duration: 1.2, ease: 'power3.out' }, "-=1.2")
+    .from('.emp-badge', { scale: 0.9, opacity: 0, duration: 0.6, ease: 'back.out(1.5)' }, "-=1")
+    .from('.emp-delivery', { opacity: 0, x: -10, duration: 0.6 }, "-=0.8")
+    .from('.emp-hero-actions > *', { opacity: 0, y: 20, duration: 0.8, stagger: 0.1, ease: 'power2.out' }, "-=0.6")
+    .from('.scroll-indicator', { opacity: 0, y: 20, duration: 1 }, "-=0.5");
+
+  // Cinematic Hero Background reveal
+  gsap.from('.emp-hero-bg img', { scale: 1.15, filter: 'blur(10px)', duration: 2, ease: 'power3.out' });
+
+  gsap.to('.emp-hero-bg img', {
+    yPercent: 20,
+    ease: 'none',
+    scrollTrigger: {
+      trigger: '.emp-hero',
+      start: 'top top',
+      end: 'bottom top',
+      scrub: 1
+    }
+  });
+
+  gsap.from('.highlight-stat', {
+    y: 30, opacity: 0, duration: 0.8, stagger: 0.15, ease: 'power3.out',
+    scrollTrigger: { trigger: '.emp-highlights-bar', start: 'top 85%' }
+  });
+
+  gsap.from('.emp-info-left > *', {
+    y: 50, opacity: 0, duration: 1, stagger: 0.15, ease: 'power3.out',
+    scrollTrigger: { trigger: '.emp-details', start: 'top 75%' }
+  });
+
+  gsap.from('.feature-item', {
+    y: 40, opacity: 0, duration: 0.8, stagger: 0.1, ease: 'power3.out',
+    scrollTrigger: { trigger: '.emp-info-right', start: 'top 80%' }
+  });
+
+  gsap.from('.emp-gallery-header > *', {
+    y: 30, opacity: 0, duration: 0.8, stagger: 0.2, ease: 'power3.out',
+    scrollTrigger: { trigger: '.emp-gallery', start: 'top 85%' }
+  });
+
+  gsap.from('.gallery-item', {
+    x: 100, opacity: 0, duration: 1, stagger: 0.15, ease: 'power4.out',
+    scrollTrigger: { trigger: '.emp-gallery', start: 'top 70%' }
+  });
+
+  gsap.from('.emp-location-header > *', {
+    y: 30, opacity: 0, duration: 0.8, stagger: 0.15, ease: 'power3.out',
+    scrollTrigger: { trigger: '.emp-location-section', start: 'top 85%' }
+  });
+
+  gsap.from('.emp-contact-text > *', {
+    x: -50, opacity: 0, duration: 1, stagger: 0.15, ease: 'power3.out',
+    scrollTrigger: { trigger: '.emp-contact', start: 'top 80%' }
+  });
+
+  gsap.from('.emp-cta-card', {
+    scale: 0.9, opacity: 0, duration: 1, ease: 'back.out(1.2)',
+    scrollTrigger: { trigger: '.emp-contact', start: 'top 80%' }
+  });
+
+  // Floating CTA visibility
+  const cta = document.getElementById('floatingCta');
+  if (cta) {
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > window.innerHeight * 0.7) {
+        cta.classList.add('visible');
+      } else {
+        cta.classList.remove('visible');
+      }
+    }, { passive: true });
+  }
+
+  // Initialize heavy 3D Tilt system on new elements
+  if (typeof init3DTilt === 'function') {
+    // Adding small delay to ensure DOM renderer has attached everything
+    setTimeout(() => {
+      init3DTilt('.feature-item');
+      init3DTilt('.gallery-item');
+      init3DTilt('.highlight-stat');
+      init3DTilt('.emp-cta-card');
+    }, 100);
+  }
+}
+
