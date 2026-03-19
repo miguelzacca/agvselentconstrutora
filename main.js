@@ -545,7 +545,7 @@ if (document.body.classList.contains('empreendimento-page')) {
   };
 
   const urlParams = new URLSearchParams(window.location.search);
-  let projectId = urlParams.get('id');
+  let projectId = urlParams.get('q');
   if (!projectId || !projectsData[projectId]) projectId = 'nizuc';
   const data = projectsData[projectId];
 
