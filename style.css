@@ -349,6 +349,7 @@ h4,
 .hero {
   position: relative;
   height: 100vh;
+  height: 100dvh;
   min-height: 650px;
   display: flex;
   align-items: center;
@@ -1229,9 +1230,9 @@ h4,
         rgba(11, 17, 20, 0.95) 100%);
   }
 
-  /* Give hero content room from header */
+  /* Remove extra padding so it perfectly centers */
   .hero-content {
-    padding-top: 80px;
+    padding-top: 0;
     width: 100%;
     max-width: 100%;
   }
