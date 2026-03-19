@@ -352,7 +352,7 @@ h4,
   min-height: 650px;
   display: flex;
   align-items: center;
-  padding: 120px 5% 0;
+  padding: 60px 5% 0;
   /* added padding to prevent header overlap */
   overflow: hidden;
 }
