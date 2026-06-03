@@ -32,6 +32,7 @@
 html {
   font-size: 16px;
   scrollbar-width: none;
+  overflow-x: hidden;
   /* Firefox */
   -ms-overflow-style: none;
   /* IE/Edge */
